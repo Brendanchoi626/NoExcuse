@@ -1,12 +1,17 @@
 from flask import Flask, render_template
 import sqlite3
+import os
+import random
+
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
+    arr = os.listdir(r'C:\Users\brendan\12DTP\12DTP\NoExcuse\static\videos with inspirational qoutes')
+    randvid = random.choice(arr)
     #codes
-    return render_template('home.html')
+    return render_template('home.html', randvid=randvid)
 
 @app.route('/routine/')
 def all_routines():
