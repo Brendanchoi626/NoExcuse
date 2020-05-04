@@ -28,6 +28,7 @@ li a:hover:not(.active) {
 .homepic{
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
 
     
 }
@@ -42,4 +43,9 @@ li a:hover:not(.active) {
     margin: 0;
     vertical-align: top;
     background-color: transparent;
+}
+/*-------------------------------------*/
+/*footer.html*/
+.footers{
+    background-color: aquamarine;
 }

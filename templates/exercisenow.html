@@ -1,5 +1,10 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<p>Exercise now page</p>
+    {% for exercise in exercisenow %}
+         <p><strong>{{exercise[0]}}</strong></p>
+         <p>Reps: {{exercise[1]}}</p>
+         <p>Cooldown-Terms: {{exercise[3]}}</p>
+         <p>Sets: {{exercise[2]}}</p>
+    {% endfor %}
 {% endblock %}

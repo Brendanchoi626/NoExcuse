@@ -1,5 +1,9 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<p>amin routine content</p>
+    {% for routine in routines %}
+        <p>
+            <a href="/exercisenow/{{routine[0]}}">{{ routine[1] }}</a>
+        </p>
+    {% endfor %}
 {% endblock %}
