@@ -1,49 +1,59 @@
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    font-family: Verdana, Tahoma, sans-serif;
+}
 /* Nav.html */
-.navbar{
+.navall{
+    display: flex;
+    align-items: center;
+    padding: 30px 10%;
+}
+nav{
     list-style-type: none;
     margin: 1px;
     padding: 0;
-    overflow: hidden;
-    background-color: lightblue;
-    width: 80%;
+    overflow: auto;
+    background-color: rgb(37, 37, 39);
+    width: 100%;
+}
+.logo{
+    margin-left: 10px;
+    cursor: pointer;
+}
+ul {
+    padding: 0;
+    margin:0 0 0 150px;
+    list-style: none;
+}
+.navbar li {
+    display: inline-block;
 
 }
-li {
-    float: left;
-}
   
-li a {
-    display: block;
+.navbar li a {
+    width: 100px;
+    display:block;
     color:white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 15px;
     text-decoration: none;
 }
   
-li a:hover:not(.active) {
-    background-color:blue;
+.navbar li a:hover {
+    background-color: rgb(71, 70, 70); 
 }
 /*-------------------------------------*/
 /*home.html*/
 .homepic{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-
-    
+    margin-top: 20px;    
 }
 /*-------------------------------------*/
 /*header.html*/
-.logo{
-    display: inline-block;
-}
-.homebutton{
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    vertical-align: top;
-    background-color: transparent;
-}
 /*-------------------------------------*/
 /*footer.html*/
 .footers{
