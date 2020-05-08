@@ -18,7 +18,7 @@ def all_routines():
     conn = sqlite3.connect('database.db')
     cur = conn.cursor()
     cur.execute('SELECT * FROM Routine;')
-    routines = cur.fetchall()
+    routines = cur.fetchall() 
     return render_template('routine.html', routines=routines)
 
 @app.route('/help/')
@@ -32,7 +32,9 @@ def exercisenow(id):
     cur = conn.cursor()
     cur.execute('SELECT Exercise.name, ExerciseRoutine.reps, ExerciseRoutine.sets, ExerciseRoutine.term FROM ExerciseRoutine INNER JOIN Exercise ON ExerciseRoutine.Exercise=Exercise.id WHERE ExerciseRoutine.Routine= (SELECT id FROM Routine WHERE id = {});'.format(id))
     exercisenow = cur.fetchall()
-    return render_template('exercisenow.html', exercisenow=exercisenow)
+    cur.execute("SELECT Routine.decscription FROM Routine Where id == {};".format(id))
+    description = cur.fetchone()
+    return render_template('exercisenow.html', exercisenow=exercisenow, description=description[0])
 
 if __name__ == '__main__':
     app.run(debug=True)
