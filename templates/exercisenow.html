@@ -3,9 +3,11 @@
 {% block content %}   
         <p>Description: {{description}}</p>
     {% for exercise in exercisenow %}
+    <div class="exercisenow">
          <p><strong>{{exercise[0]}}</strong></p>
          <p>Reps: {{exercise[1]}}</p>
          <p>Cooldown-Terms: {{exercise[3]}}</p>
          <p>Sets: {{exercise[2]}}</p>
+    </div>
     {% endfor %}
 {% endblock %}

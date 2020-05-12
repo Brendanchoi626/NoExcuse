@@ -1,9 +1,18 @@
 {% extends 'layout.html' %}
-
 {% block content %}
-    {% for routine in routines %}
-        <p>
-            <a href="/exercisenow/{{routine[0]}}">{{ routine[1] }}</a>
-        </p>
-    {% endfor %}
+    <div class="routine">
+        <a class="arm" href="/exercisenow/{{(routines[0])[0]}}"><img src="/static/Pictures for routine page/arm-crop.jpg" height="400" width="400">{{ (routines[0])[1] }}</a>
+        <a class="back" href="/exercisenow/{{(routines[1])[0]}}"><img src="/static/Pictures for routine page/back-crop.jpg" height="400" width="400">{{ (routines[1])[1] }}</a>
+        <a class="upperbody" href="/exercisenow/{{(routines[2])[0]}}"><img src="/static/Pictures for routine page/upperbody-crop.jpg" height="400" width="400">{{ (routines[2])[1] }}</a>
+        <a class="legs" href="/exercisenow/{{(routines[3])[0]}}"><img src="/static/Pictures for routine page/legs-crop.jpg" height="400" width="400">{{ (routines[3])[1] }}</a>
+        <a class="abs" href="/exercisenow/{{(routines[4])[0]}}"><img src="/static/Pictures for routine page/abs-crop.jpg" height="400" width="400">{{ (routines[4])[1] }}</a>
+        <a class="10min_fire" href="/exercisenow/{{(routines[5])[0]}}"><img src="/static/Pictures for routine page/10min_fire-crop.jpg" height="400" width="400">{{ (routines[5])[1] }}</a>
+        <a class="all_combined" href="/exercisenow/{{(routines[6])[0]}}"><img src="/static/Pictures for routine page/all_combined-crop.jpg" height="400" width="400">{{ (routines[6])[1] }}</a>
+        <a class="core" href="/exercisenow/{{(routines[7])[0]}}"><img src="/static/Pictures for routine page/core-crop.jpg" height="400" width="400">{{ (routines[7])[1] }}</a>
+        <a class="5min_destroyer" href="/exercisenow/{{(routines[8])[0]}}"><img src="/static/Pictures for routine page/5min_destroyer-crop.jpg" height="400" width="400">{{ (routines[8])[1] }}</a>
+        <a class="armhard" href="/exercisenow/{{(routines[9])[0]}}"><img src="/static/Pictures for routine page/arm(hard)-crop.jpg" height="400" width="400">{{ (routines[9])[1] }}</a>
+        <a class="backhard" href="/exercisenow/{{(routines[10])[0]}}"><img src="/static/Pictures for routine page/back(hard)-crop.jpg" height="400" width="400">{{ (routines[10])[1] }}</a>
+    </div>
 {% endblock %}
+
+
