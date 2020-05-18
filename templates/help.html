@@ -1,5 +1,8 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<p>This is suppose to be a help page</p>
+    <h1><strong>Cannot perform an exercise? We can help.</strong></h1>
+    {% for help in help_exercise %}
+        <a href="#help[0]">{{ help[1] }}</a>
+    {% endfor %}
 {% endblock %}

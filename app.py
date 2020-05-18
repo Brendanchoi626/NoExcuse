@@ -9,22 +9,27 @@ app = Flask(__name__)
 def home():
     arr = os.listdir(r'C:\Users\brend\12DTP\12DTP\NoExcuse\static\videos with inspirational qoutes')
     randvid = random.choice(arr)
-    #codesS
+    #codes
     return render_template('home.html', randvid=randvid)
 
 @app.route('/routine/')
 def all_routines():
-    #codes
     conn = sqlite3.connect('database.db')
     cur = conn.cursor()
     cur.execute('SELECT * FROM Routine;')
-    routines = cur.fetchall() 
+    routines = cur.fetchall()
+    #codes 
     return render_template('routine.html', routines=routines)
 
 @app.route('/help/')
 def help():
+    conn = sqlite3.connect('database.db')
+    cur = conn.cursor()
+    cur.execute('SELECT id, name FROM Exercise')
+    help_exercise = cur.fetchall()
     #codes
-    return render_template('help.html')
+    return render_template('help.html', help_exercise=help_exercise)
+    
 
 @app.route('/exercisenow/<int:id>')
 def exercisenow(id):
