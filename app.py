@@ -41,5 +41,9 @@ def exercisenow(id):
     description = cur.fetchone()
     return render_template('exercisenow.html', exercisenow=exercisenow, description=description[0])
 
+@app.route('/images_copyrights/')
+def image_source():
+    return render_template("images_copyrights.html")
+
 if __name__ == '__main__':
     app.run(debug=True)

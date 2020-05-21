@@ -112,3 +112,18 @@ footer p{
     display: block;
     overflow: auto;
 }
+/*------------------------------------*/
+/*images_copyrights.html*/
+.container{
+    position: relative;
+    text-align: center;
+}
+
+.imgtext{
+    position: absolute;
+    z-index: 1;
+}
+.container video{
+    position: relative;
+    z-index: 0;
+}
