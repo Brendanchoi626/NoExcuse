@@ -122,6 +122,8 @@ footer p{
 .imgtext{
     position: absolute;
     z-index: 1;
+    bottom: 8;
+    right: 16;
 }
 .container video{
     position: relative;

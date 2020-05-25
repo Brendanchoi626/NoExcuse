@@ -29,8 +29,13 @@ def help():
     help_exercise = cur.fetchall()
     #codes
     return render_template('help.html', help_exercise=help_exercise)
-    
 
+@app.route('/workouthelper/<int:id>')
+def workouthelper():
+    conn = sqlite3.connect('database.db')
+    cur = conn.cursor()
+    cur.execute()
+    
 @app.route('/exercisenow/<int:id>')
 def exercisenow(id):
     conn = sqlite3.connect('database.db')
