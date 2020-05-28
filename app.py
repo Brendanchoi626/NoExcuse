@@ -3,32 +3,33 @@ import random
 import sqlite3
 from flask import Flask, render_template
 
+def sqlite_conn(database, query, single=False):
+    "connects to a database and returns data"
+    conn = sqlite3.connect(database)
+    cur = conn.cursor()
+    cur.execute(query)
+    results = cur.fetchone() if single else cur.fetchall()
+    conn.close()
+    return results
+
 app = Flask(__name__)
+
 
 @app.route('/')
 def home():
     arr = os.listdir(r'C:\Users\brend\12DTP\12DTP\NoExcuse\static\videos with inspirational qoutes')
     randvid = random.choice(arr)
-    #codes
     return render_template('home.html', randvid=randvid)
 
 @app.route('/routine/')
 def all_routines():
-    conn = sqlite3.connect('database.db')
-    cur = conn.cursor()
-    cur.execute('SELECT * FROM Routine;')
-    routines = cur.fetchall()
-    #codes 
-    return render_template('routine.html', routines=routines)
+    results = sqlite_conn('database.db', "SELECT * FROM Routine")
+    return render_template('routine.html', routines=results)
 
 @app.route('/help/')
 def help():
-    conn = sqlite3.connect('database.db')
-    cur = conn.cursor()
-    cur.execute('SELECT id, name FROM Exercise')
-    help_exercise = cur.fetchall()
-    #codes
-    return render_template('help.html', help_exercise=help_exercise)
+    results = sqlite_conn('database.db', "SELECT id, name FROM Exercise")
+    return render_template('help.html', help_exercise=results)
 
 @app.route('/workouthelper/<int:id>')
 def workouthelper():
@@ -38,12 +39,8 @@ def workouthelper():
     
 @app.route('/exercisenow/<int:id>')
 def exercisenow(id):
-    conn = sqlite3.connect('database.db')
-    cur = conn.cursor()
-    cur.execute('SELECT Exercise.name, ExerciseRoutine.reps, ExerciseRoutine.sets, ExerciseRoutine.term FROM ExerciseRoutine INNER JOIN Exercise ON ExerciseRoutine.Exercise=Exercise.id WHERE ExerciseRoutine.Routine= (SELECT id FROM Routine WHERE id = {});'.format(id))
-    exercisenow = cur.fetchall()
-    cur.execute("SELECT Routine.decscription FROM Routine Where id == {};".format(id))
-    description = cur.fetchone()
+    exercisenow = sqlite_conn('database.db', 'SELECT Exercise.name, ExerciseRoutine.reps, ExerciseRoutine.sets, ExerciseRoutine.term FROM ExerciseRoutine INNER JOIN Exercise ON ExerciseRoutine.Exercise=Exercise.id WHERE ExerciseRoutine.Routine= (SELECT id FROM Routine WHERE id = {});'.format(id))
+    description = sqlite_conn('database.db', 'SELECT Routine.decscription FROM Routine Where id == {};'.format(id), True)
     return render_template('exercisenow.html', exercisenow=exercisenow, description=description[0])
 
 @app.route('/images_copyrights/')
