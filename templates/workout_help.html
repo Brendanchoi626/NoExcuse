@@ -1,0 +1,6 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {% for result in results %}
+        {{result[0]|safe}}
+    {% endfor %}
+{% endblock %}

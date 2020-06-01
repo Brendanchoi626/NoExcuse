@@ -28,14 +28,13 @@ def all_routines():
 
 @app.route('/help/')
 def help():
-    results = sqlite_conn('database.db', "SELECT id, name FROM Exercise")
+    results = sqlite_conn('database.db', "select id, name from Exercise where Exercise.id in (select exercise_id from Help)")
     return render_template('help.html', help_exercise=results)
 
-@app.route('/workouthelper/<int:id>')
-def workouthelper():
-    conn = sqlite3.connect('database.db')
-    cur = conn.cursor()
-    cur.execute()
+@app.route('/workout_help/<int:id>')
+def workouthelper(id):
+    results = sqlite_conn('database.db', "SELECT desc FROM Help where Help.exercise_id == {}".format(id))
+    return render_template('workout_help.html', results=results)
     
 @app.route('/exercisenow/<int:id>')
 def exercisenow(id):

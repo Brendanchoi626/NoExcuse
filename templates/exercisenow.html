@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block content %}   
-        <p>Description: {{description}}</p>
+        {{description|safe}}
     {% for exercise in exercisenow %}
     <div class="exercisenow">
          <p><strong>{{exercise[0]}}</strong></p>

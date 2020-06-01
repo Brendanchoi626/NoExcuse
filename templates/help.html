@@ -4,7 +4,7 @@
     <h1><strong>Cannot perform an exercise? We can help.</strong></h1>
         <div class="help">
             {% for help in help_exercise %}
-                <a href="#help[0]"><p>{{ help[1] }}</p></a>
+                <a href="/workout_help/{{help[0]}}"><p>{{ help[1] }}</p></a>
             {% endfor %}
         </div>
 {% endblock %} 
