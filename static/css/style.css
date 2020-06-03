@@ -94,52 +94,111 @@ footer p{
     background-color: whitesmoke;
 }
 .routine {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     width: 100%;
+    height: auto;
     grid-column-gap: 10px;
-    grid-row-gap:10px;
-    margin: 10px 0 10px 0;
+    grid-row-gap: 10px;
 }
 .routine a img{
     margin: auto;
     padding: auto;
+    width: 100%;
+    height: auto;
 
 }
 
 /*------------------------------------*/
 /*exercisenow.html*/
 .exercisenow{
-    display: block;
     overflow: auto;
+    width: 90%;
+    height: auto;
 }
+
 /*------------------------------------*/
-/*images_copyrights.html*/
+/*images_copyrights.html and routine.html*/
+.container *, .container *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+}
 .container{
-    position: relative;
-    text-align: center;
     display:grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     width: 100%;
+    height: auto;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+}
+.box{
+    width: 400px;
+    height: auto;
+    position: relative;
+    background-color: white;
+    margin: 10px auto;
+
 }
 .container video{
     width: 100%;
     height: auto;
     z-index: 0;
 }
-
-.imgtext{
+.box img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.box::before, .box::after{
+    content:"";
     position: absolute;
-    z-index: 1;
-    bottom: 8;
-    right: 16;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    transition: all 0.5s ease-out;
+}
+.box::before{
+    border-top: 2px dashed white;
+    border-bottom: 2px dashed white;
+    transform: scale(0,1);
+}
+.box::after{
+    border-top: 2px dashed white;
+    border-bottom: 2px dashed white;
+    transform: scale(1,0);
+}
+.box:hover::before{
+    background-color: rgba(0,0,0,0.4);
+    transform: scale(1, 1);
+}
+.box:hover::after{
+    background-color: rgba(0,0,0,0.4);
+    transform: scale(1, 1);
 }
 .imgtext{
+    position: absolute;
+    color: white;
+    bottom: 0;
+    width: 400px;
+    height: auto;
+    padding: 90px 30px;
+    display: none;
+    text-align: center;
+}
+.box:hover .imgtext{
+    display: block;
+}
+/*-------------------------------------*/
+/*help.html*/
+.help{
     display: grid;
     grid-template-columns: auto auto auto;
     width: 100%;
-    position: absolute;
-    z-index: 1;
+    height: auto;
+    text-align: center;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }

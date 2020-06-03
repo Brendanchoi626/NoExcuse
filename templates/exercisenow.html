@@ -1,13 +1,13 @@
 {% extends 'layout.html' %}
 
 {% block content %}   
-        {{description|safe}}
-    {% for exercise in exercisenow %}
     <div class="exercisenow">
-         <p><strong>{{exercise[0]}}</strong></p>
-         <p>Reps: {{exercise[1]}}</p>
-         <p>Cooldown-Terms: {{exercise[3]}}</p>
-         <p>Sets: {{exercise[2]}}</p>
+        {{description|safe}}
+        {% for exercise in exercisenow %}   
+            <p><strong>{{exercise[0]}}</strong></p>
+            <p>Reps: {{exercise[1]}}</p>
+            <p>Cooldown-Terms: {{exercise[3]}}</p>
+            <p>Sets: {{exercise[2]}}</p>
+        {% endfor %}
     </div>
-    {% endfor %}
 {% endblock %}
