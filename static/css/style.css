@@ -5,6 +5,9 @@ html{
     background-color:whitesmoke;
     font-family: Verdana, Tahoma, sans-serif;
 }
+html a{
+    text-decoration: none;
+}
 /* Nav.html */
 .navall{
     display: flex;
@@ -79,7 +82,13 @@ footer p{
 
 /*------------------------------------*/
 /*routine.html*/
-.routine a{
+.routine *, .routine *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+.routine a p{
     text-align: center;
     padding: 20px;
     border: 0.5px solid rgba(0, 0, 0, 0.8);
@@ -88,8 +97,6 @@ footer p{
     font-weight: bold;
     background-color: white;
 }
-
-
 .routine a:hover{
     background-color: whitesmoke;
 }
@@ -101,12 +108,59 @@ footer p{
     grid-column-gap: 10px;
     grid-row-gap: 10px;
 }
-.routine a img{
+.routine_content{
+    width: 400px;
+    height: auto;
+    position: relative;
+    background-color: white;
+    margin: 10px auto;
+}
+.routine_content img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
     margin: auto;
     padding: auto;
-    width: 100%;
+}
+.routine_content::before, .routine_content::after{
+    content:"";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 85px;
+    transition: all 0.5s ease-out;
+}
+.routine_content::before{
+    border-top: 2px dashed white;
+    border-bottom: 2px dashed white;
+    transform: scale(0,1);
+}
+.routine_content::after{
+    border-top: 2px dashed white;
+    border-bottom: 2px dashed white;
+    transform: scale(1,0);
+}
+.routine_content:hover::before{
+    background-color: rgba(0,0,0,0.4);
+    transform: scale(1, 1);
+}
+.routine_content:hover::after{
+    background-color: rgba(0,0,0,0.4);
+    transform: scale(1, 1);
+}
+.routine_description{
+    position: absolute;
+    color: white;
+    bottom: 0;
+    width: 400px;
     height: auto;
-
+    padding: 90px 30px;
+    display: none;
+    text-align: center;
+}
+.routine_content:hover .routine_description{
+    display: block;
 }
 
 /*------------------------------------*/
@@ -118,7 +172,7 @@ footer p{
 }
 
 /*------------------------------------*/
-/*images_copyrights.html and routine.html*/
+/*images_copyrights.html*/
 .container *, .container *::after, *::before{
     margin: 0;
     padding: 0;
@@ -139,7 +193,6 @@ footer p{
     position: relative;
     background-color: white;
     margin: 10px auto;
-
 }
 .container video{
     width: 100%;
@@ -194,11 +247,13 @@ footer p{
 /*-------------------------------------*/
 /*help.html*/
 .help{
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     width: 100%;
     height: auto;
-    text-align: center;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+}
+.help a{
+    text-align: center;
 }
