@@ -114,6 +114,7 @@ footer p{
     position: relative;
     background-color: white;
     margin: 10px auto;
+    z-index: 0;
 }
 .routine_content img{
     max-width: 100%;
@@ -153,14 +154,28 @@ footer p{
     position: absolute;
     color: white;
     bottom: 0;
+    top: 10px;
     width: 400px;
     height: auto;
     padding: 90px 30px;
-    display: none;
+    visibility: hidden;
     text-align: center;
+    font-size: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+.routine_description a::after{
+    text-decoration:none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 10px;
+    bottom: 80px;
+    background-color: transparent;
+
 }
 .routine_content:hover .routine_description{
-    display: block;
+    visibility: visible;
 }
 
 /*------------------------------------*/
@@ -193,6 +208,7 @@ footer p{
     position: relative;
     background-color: white;
     margin: 10px auto;
+    z-index: 0;
 }
 .container video{
     width: 100%;
@@ -240,6 +256,7 @@ footer p{
     padding: 90px 30px;
     display: none;
     text-align: center;
+    z-index: 1;
 }
 .box:hover .imgtext{
     display: block;

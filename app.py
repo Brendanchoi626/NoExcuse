@@ -39,7 +39,7 @@ def workouthelper(id):
     
 @app.route('/exercisenow/<int:id>')
 def exercisenow(id):
-    exercisenow = sqlite_conn('database.db', 'SELECT Exercise.name, ExerciseRoutine.reps, ExerciseRoutine.sets, ExerciseRoutine.term FROM ExerciseRoutine INNER JOIN Exercise ON ExerciseRoutine.Exercise=Exercise.id WHERE ExerciseRoutine.Routine= (SELECT id FROM Routine WHERE id = {});'.format(id))
+    exercisenow = sqlite_conn('database.db', 'SELECT Exercise.name, ExerciseRoutine.reps, ExerciseRoutine.sets, ExerciseRoutine.term, Exercise.description FROM ExerciseRoutine INNER JOIN Exercise ON ExerciseRoutine.Exercise=Exercise.id WHERE ExerciseRoutine.Routine= (SELECT id FROM Routine WHERE id = {})'.format(id))
     description = sqlite_conn('database.db', 'SELECT Routine.decscription FROM Routine Where id == {};'.format(id), True)
     return render_template('exercisenow.html', exercisenow=exercisenow, description=description[0])
 

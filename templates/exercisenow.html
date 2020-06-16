@@ -4,10 +4,10 @@
     <div class="exercisenow">
         {{description|safe}}
         {% for exercise in exercisenow %}   
-            <p><strong>{{exercise[0]}}</strong></p>
+            <p>{{exercise[4]|safe}} </p>
             <p>Reps: {{exercise[1]}}</p>
             <p>Cooldown-Terms: {{exercise[3]}}</p>
-            <p>Sets: {{exercise[2]}}</p>
+            <p>Sets: {{exercise[2]}}</p>           
         {% endfor %}
     </div>
 {% endblock %}
