@@ -6,11 +6,11 @@ from flask import Flask, render_template
 def sqlite_conn(database, query, single=False):
     "connects to a database and returns data"
     conn = sqlite3.connect(database)
-    cur = conn.cursor()
-    cur.execute(query)
-    results = cur.fetchone() if single else cur.fetchall()
-    conn.close()
-    return results
+    cur = conn.cursor() 
+    cur.execute(query) 
+    results = cur.fetchone() if single else cur.fetchall() 
+    conn.close() 
+    return results 
 
 app = Flask(__name__)
 
@@ -18,7 +18,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     arr = os.listdir(r'C:\Users\brend\12DTP\12DTP\NoExcuse\static\videos with inspirational qoutes')
-    randvid = random.choice(arr)
+    randvid = random.choice(arr) #Selects a random video file from a folder with a path above and returns it
     return render_template('home.html', randvid=randvid)
 
 @app.route('/routine/')
@@ -44,8 +44,16 @@ def exercisenow(id):
     return render_template('exercisenow.html', exercisenow=exercisenow, description=description[0])
 
 @app.route('/images_copyrights/')
-def image_source():
+def image_source():   
     return render_template("images_copyrights.html")
+
+@app.route('/about/')
+def about():
+    return render_template("about.html")
+
+@app.route('/testimonial/')
+def testimonial():
+    return render_template("testimonial.html")
 
 if __name__ == '__main__':
     app.run(debug=True)

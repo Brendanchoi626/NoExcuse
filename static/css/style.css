@@ -1,5 +1,6 @@
+/*Styles the whole page*/
 html{
-    box-sizing: border-box;
+    box-sizing: border-box; 
     margin: 0;
     padding: 0;
     background-color:whitesmoke;
@@ -8,7 +9,8 @@ html{
 html a{
     text-decoration: none;
 }
-/* Nav.html */
+/*-------------------------------------*/
+/*styles Nav.html */
 .navall{
     display: flex;
     align-items: center;
@@ -50,7 +52,7 @@ nav ul {
     background-color: rgb(71, 70, 70); 
 }
 /*-------------------------------------*/
-/*home.html*/
+/*styles home.html*/
 .homepic{
     margin-left: auto;
     margin-right: auto;
@@ -63,7 +65,7 @@ nav ul {
 /*-------------------------------------*/
 /*header.html*/
 /*-------------------------------------*/
-/*footer.html*/
+/*styles footer.html*/
 footer{
     background-color: rgb(71, 70, 70);
     align-items: center;
@@ -76,12 +78,11 @@ footer a{
     text-decoration: none;
 }
 footer p{
-    text-align: center;
-    
+    text-align: center;   
 }
-
 /*------------------------------------*/
-/*routine.html*/
+/*styles routine.html*/
+/*refereced from pop-up css affect from https://www.youtube.com/watch?v=k5fpqtOD530*/
 .routine *, .routine *::after, *::before{
     margin: 0;
     padding: 0;
@@ -97,12 +98,10 @@ footer p{
     font-weight: bold;
     background-color: white;
 }
-.routine a:hover{
-    background-color: whitesmoke;
-}
 .routine {
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /*displays the contents in grid, while keeping the*/
+    /*size of the images the same. This line also automatically positions thecontent in the page when it resizes.  */
     width: 100%;
     height: auto;
     grid-column-gap: 10px;
@@ -123,6 +122,7 @@ footer p{
     margin: auto;
     padding: auto;
 }
+/*specifies the position of the content that appears in certain action(hover in this case)*/
 .routine_content::before, .routine_content::after{
     content:"";
     position: absolute;
@@ -132,16 +132,18 @@ footer p{
     bottom: 85px;
     transition: all 0.5s ease-out;
 }
+/* Creates the while border that appears and disappears in a certain action (hover in this case below) */
 .routine_content::before{
-    border-top: 2px dashed white;
-    border-bottom: 2px dashed white;
+    border-top: 2px groove white;
+    border-bottom: 2px groove white;
     transform: scale(0,1);
 }
 .routine_content::after{
-    border-top: 2px dashed white;
-    border-bottom: 2px dashed white;
+    border-top: 2px groove white;
+    border-bottom: 2px groove white;
     transform: scale(1,0);
 }
+/* Creates the transition motion affect on the routine page, that is set in the code above */
 .routine_content:hover::before{
     background-color: rgba(0,0,0,0.4);
     transform: scale(1, 1);
@@ -171,23 +173,20 @@ footer p{
     position: relative;
     top: 10px;
     bottom: 80px;
-    background-color: transparent;
-
 }
 .routine_content:hover .routine_description{
     visibility: visible;
 }
 
 /*------------------------------------*/
-/*exercisenow.html*/
+/*styles exercisenow.html*/
 .exercisenow{
     overflow: auto;
     width: 90%;
     height: auto;
 }
-
 /*------------------------------------*/
-/*images_copyrights.html*/
+/*styles images_copyrights.html*/
 .container *, .container *::after, *::before{
     margin: 0;
     padding: 0;
@@ -220,6 +219,7 @@ footer p{
     height: auto;
     object-fit: cover;
 }
+/*specifies the position of the content that appears in certain action(hover in this case)*/
 .box::before, .box::after{
     content:"";
     position: absolute;
@@ -229,16 +229,18 @@ footer p{
     bottom: 15px;
     transition: all 0.5s ease-out;
 }
+/* Creates the while border that appears and disappears in a certain action (hover in this case below) */
 .box::before{
-    border-top: 2px dashed white;
-    border-bottom: 2px dashed white;
+    border-top: 2px groove white;
+    border-bottom: 2px groove white;
     transform: scale(0,1);
 }
 .box::after{
-    border-top: 2px dashed white;
-    border-bottom: 2px dashed white;
+    border-top: 2px groove white;
+    border-bottom: 2px groove white;
     transform: scale(1,0);
 }
+/* Creates the transition motion affect on the routine page, that is set in the code above */
 .box:hover::before{
     background-color: rgba(0,0,0,0.4);
     transform: scale(1, 1);
@@ -262,7 +264,7 @@ footer p{
     display: block;
 }
 /*-------------------------------------*/
-/*help.html*/
+/*styles help.html*/
 .help{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -274,3 +276,5 @@ footer p{
 .help a{
     text-align: center;
 }
+/*-------------------------------------*/
+/*about.html*/
