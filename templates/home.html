@@ -2,7 +2,41 @@
 {% block content %}
 <div class="homepic">
     <video width="1920" height="1080" autoplay loop>
+        <!-- videos selected randomly from a folder is played in the home page.  -->
     <source src="/static/videos with inspirational qoutes/{{randvid}}" type="video/mp4">
     </video>
+
+    <div class="home_contents">
+        <div class="home_content">
+        <h2>Workout at home for Free!</h2>
+        <p>NoExcuse contains many exercise routines which are premade for you
+            which most of it could just be done at home!
+        </p>
+        <a href="/routine"><p>Browse free routines</p></a>
+        </div>
+        <div class="home_content">
+            <img src="/static/pictures to be replaced/black.jpg" width="600" height="400">
+        </div>
+    </div>
+    <div class="home_contents">
+        <div class="home_content">
+            <img src="/static/pictures to be replaced/black.jpg" width="600" height="400">
+        </div>
+        <div class="home_content">
+            <h2>Not Sure Where to Start?</h2>
+            <p>Here are some suggestions that we have for you!
+            </p>
+            <a href="/exercisenow/1"><p>Start from basic!</p></a>
+            <a href="/exercisenow/6"><p>You don't have time?</p></a>
+            <a href="/exercisenow/9"><p>Ready to challenge yourself?</p></a>
+        </div>
+    </div>
+    <div class="home_contents">
+        <div class="home_content">
+            <h2>Everyone starts from 0</h2>
+            <p>testimonial</p>
+        </div>
+    </div>
+
 </div>
 {% endblock %}

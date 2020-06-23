@@ -62,6 +62,30 @@ nav ul {
     width: 100%;
     height: auto;
 }
+.home_contents{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    margin: 20px 0px 20px 0px;
+    padding: 10px;
+    
+}
+.home_content{
+    width: 600px;
+    height: auto;
+    position: relative;
+}
+.home_content a{
+    display: block;
+    background-color: rgb(37, 37, 39);
+    color: white;
+    min-width: 50px;
+    width: 180px;
+    height:auto;
+    text-align: center;
+}
+
 /*-------------------------------------*/
 /*header.html*/
 /*-------------------------------------*/

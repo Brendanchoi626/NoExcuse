@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="/static/css/style.css"/> 
 </head>
 <body>
+    <!-- Layouts the page, where Nav.html and fotter.html are constants. -->
     <nav>{% include 'nav.html' %}</nav>
+    <!-- Main contents that show the min information -->
     <main>{% block content %}{% endblock %}</main>
     <footer>{% include 'footer.html' %}</footer>
     

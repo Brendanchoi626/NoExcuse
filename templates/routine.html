@@ -2,10 +2,13 @@
 {% block content %}
     <h1>Routines</h1>
     <div class="routine">
+        <!-- Each routine content class contains a hyperlink to a specific exercising page. -->
         <div class="routine_content">
             <a href="/exercisenow/{{(routines[0])[0]}}"><img src="/static/Pictures for routine page/arm-crop.jpg" height="400" width="400"><p>{{ (routines[0])[1] }}</p></a>
-            <div class="routine_description">
-                <p>{{ (description[0])[0]|safe }}</p>
+            <!-- Each routine description class contains the description of a specific workout(same description in exercise now page) -->
+            <!-- Contents in here will appear with fade affect on Hover -->
+            <div class="routine_description"> 
+                <p>{{ (description[0])[0]|safe }}</p> 
             </div>
         </div>
         <div class="routine_content">

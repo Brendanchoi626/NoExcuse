@@ -3,6 +3,7 @@ import random
 import sqlite3
 from flask import Flask, render_template
 
+# Acts like a sql query runner
 def sqlite_conn(database, query, single=False):
     "connects to a database and returns data"
     conn = sqlite3.connect(database)
