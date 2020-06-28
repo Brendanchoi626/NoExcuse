@@ -62,14 +62,18 @@ nav ul {
     width: 100%;
     height: auto;
 }
+/* image and text combination layout */
 .home_contents{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     height: auto;
     margin: 20px 0px 20px 0px;
-    padding: 10px;
-    
+    padding: 0px;
+}
+.home_contents img{
+    position: relative;
+    width: 100%;
 }
 .home_content{
     width: 600px;
@@ -85,9 +89,50 @@ nav ul {
     height:auto;
     text-align: center;
 }
-
-/*-------------------------------------*/
-/*header.html*/
+/* Text over image layout */
+.home_contents2{
+    margin-left: auto;
+    margin-right: auto;
+    padding:0px;
+    width: 80%;
+}
+.home_contents2 img{
+    width: 100%;
+    height: auto;
+    max-height: 720px;
+    z-index: 0;
+}
+.contents{
+    position: relative;
+    color: white;
+    align-content: center;
+    top: -350px;
+    height: auto;
+    padding: 0px;
+    text-align: center;
+    font-size: auto;
+    z-index: 1;
+}
+/* ----------------------------------- */
+/* testimonial.html */
+/* padding( top | right | bottom | left ) */
+.testimonial{
+    width: 80%;
+    height: auto;
+    padding: 0% 10% 0% 10%;
+}
+/* ----------------------------------- */
+/* about.html */
+.about{
+    width: 80%;
+    height: auto;
+    padding: 0% 10% 0% 10%;
+}
+.about_content img{
+    width: 100%;
+    height: auto;
+    background-color: rgb(37, 37, 39);
+}
 /*-------------------------------------*/
 /*styles footer.html*/
 footer{

@@ -1,11 +1,14 @@
 {% extends 'layout.html' %}
 {% block content %}
+<div class="homepage">
 <div class="homepic">
     <video width="1920" height="1080" autoplay loop>
         <!-- videos selected randomly from a folder is played in the home page.  -->
     <source src="/static/videos with inspirational qoutes/{{randvid}}" type="video/mp4">
     </video>
+</div>
 
+    <!-- Lays out stuffs in page as 2 elements, image and texts next to each other -->
     <div class="home_contents">
         <div class="home_content">
         <h2>Workout at home for Free!</h2>
@@ -18,6 +21,7 @@
             <img src="/static/pictures to be replaced/black.jpg" width="600" height="400">
         </div>
     </div>
+    <!-- section -->
     <div class="home_contents">
         <div class="home_content">
             <img src="/static/pictures to be replaced/black.jpg" width="600" height="400">
@@ -26,17 +30,31 @@
             <h2>Not Sure Where to Start?</h2>
             <p>Here are some suggestions that we have for you!
             </p>
-            <a href="/exercisenow/1"><p>Start from basic!</p></a>
-            <a href="/exercisenow/6"><p>You don't have time?</p></a>
-            <a href="/exercisenow/9"><p>Ready to challenge yourself?</p></a>
+            <a href="/exercisenow/1"><p>Start from basic! -> Arm</p></a>
+            <a href="/exercisenow/6"><p>You don't have time? -> 10 min fire!</p></a>
+            <a href="/exercisenow/9"><p>Ready to challenge yourself? -> 5 min destroyer</p></a>
         </div>
     </div>
+    <!-- displays taxt over a big chunk of image -->
+    <div class="home_contents2">
+            <img src="/static/pictures to be replaced/black.jpg" width="19200" height="1080">
+            <div class="contents">
+                <h2>Everyone starts from 0</h2>
+                <p>Perserverance is the key</p>
+                <a href="/testimonial"><p>testimonial</p></a>
+            </div>
+    </div>
+     <!-- section -->
     <div class="home_contents">
         <div class="home_content">
-            <h2>Everyone starts from 0</h2>
-            <p>testimonial</p>
+        <h2>NoExcuse is a workout helping website for people who
+            wants to exercise, but doesn't know what to do. </h2>
+        <a href="/about"><p>About NoExcuse</p></a>
+        </div>
+        <div class="home_content">
+            <img src="/static/pictures to be replaced/black.jpg" width="600" height="400">
         </div>
     </div>
-
 </div>
+
 {% endblock %}
