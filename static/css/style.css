@@ -9,6 +9,9 @@ html{
 html a{
     text-decoration: none;
 }
+.title{
+    padding-left: 2%;
+}
 /*-------------------------------------*/
 /*styles Nav.html */
 .navall{
@@ -35,9 +38,7 @@ nav ul {
 }
 .navbar li {
     display: inline-block;
-
 }
-  
 .navbar li a {
     width: 100px;
     display:block;
@@ -46,10 +47,25 @@ nav ul {
     padding: 20px 15px;
     text-decoration: none;
     font-size: large;
-}
-  
+
+} 
 .navbar li a:hover {
     background-color: rgb(71, 70, 70); 
+}
+.dropdown_content{
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px;
+    display: none;
+    background-color: rgb(50, 50, 50);
+
+}
+.dropdown_content a{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown_content{
+    display: block;
 }
 /*-------------------------------------*/
 /*styles home.html*/
