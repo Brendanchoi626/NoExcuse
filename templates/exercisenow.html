@@ -6,7 +6,8 @@
         {{description|safe}}
 
         <!-- shows the details of the selected workout-->
-        {% for exercise in exercisenow %}   
+        {% for exercise in exercisenow %}
+            <video controls><source src="/static/Exercise_Video/{{exercise[0]}}.mp4" type="video/mp4"></video>
             <p>{{exercise[4]|safe}} </p>
             <p>Reps: {{exercise[1]}}</p>
             <p>Cooldown-Terms: {{exercise[3]}}</p>
