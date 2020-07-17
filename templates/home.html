@@ -1,25 +1,24 @@
 {% extends 'layout.html' %}
 {% block content %}
 <div class="homepage">
-<div class="homepic">
-    <video width="1920" height="1080" autoplay loop muted>
+<!-- <div class="homepic"> -->
+    <!-- <video width="1920" height="1080" autoplay loop muted> -->
         <!-- videos selected randomly from a folder is played in the home page.  -->
-    <source src="/static/videos with inspirational qoutes/{{randvid}}" type="video/mp4">
-    </video>
-</div>
+    <!-- <source src="/static/videos with inspirational qoutes/{{randvid}}" type="video/mp4"> -->
+    <!-- </video> -->
+<!-- </div> -->
 
     <!-- Lays out stuffs in page as 2 elements, image and texts next to each other -->
-    <div class="home_contents">
-        <div class="home_content">
+    <div class="home_contents2">
+        <img src="/static/pictures to be replaced/armsfolded-crop.jpg" width="1920" height="1080">
+        <div class="contents">
         <h2>Workout at home for Free!</h2>
         <p>NoExcuse contains many exercise routines which are premade for you
             which most of it could just be done at home!
         </p>
         <a href="/routine"><p>Browse free routines</p></a>
         </div>
-        <div class="home_content">
-            <img src="/static/pictures to be replaced/black.jpg" width="600" height="400">
-        </div>
+        
     </div>
     <!-- section -->
     <div class="home_contents">
@@ -37,8 +36,8 @@
     </div>
     <!-- displays taxt over a big chunk of image -->
     <div class="home_contents2">
-            <img src="/static/pictures to be replaced/black.jpg" width="19200" height="1080">
-            <div class="contents">
+            <img src="/static/pictures to be replaced/black.jpg" width="1920" height="1080">
+            <div class="contents2">
                 <h2>Everyone starts from 0</h2>
                 <p>Perserverance is the key</p>
                 <a href="/testimonial"><p>testimonial</p></a>

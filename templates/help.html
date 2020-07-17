@@ -5,7 +5,8 @@
         <div class="help">
             <!-- returns all the links that leads to a specific workout help page -->
             {% for help in help_exercise %} 
-                <a href="/workout_help/{{help[0]}}"><p>{{ help[1] }}</p></a>
+            <img src="/static/pictures to be replaced/{{ help[1] }}.jpg">
+            <a href="/workout_help/{{help[0]}}"><p>{{ help[1] }}</p></a>
             {% endfor %}
         </div>
 {% endblock %} 

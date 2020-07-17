@@ -12,6 +12,14 @@ html a{
 .title{
     padding-left: 2%;
 }
+@media screen and (max-width: 1080px){
+    html{
+        font-size: smaller;
+    }
+    a{
+        font-size: smaller;
+    }
+}
 /*-------------------------------------*/
 /*styles Nav.html */
 .navall{
@@ -110,7 +118,7 @@ nav ul {
     margin-left: auto;
     margin-right: auto;
     padding:0px;
-    width: 80%;
+    width: 100%;
 }
 .home_contents2 img{
     width: 100%;
@@ -118,7 +126,7 @@ nav ul {
     max-height: 720px;
     z-index: 0;
 }
-.contents{
+.contents2{
     position: relative;
     color: white;
     align-content: center;
@@ -128,7 +136,25 @@ nav ul {
     text-align: center;
     font-size: auto;
     z-index: 1;
+    margin-bottom: -140px;
 }
+.contents{
+    position: relative;
+    color: white;
+    top: -130px;
+    height: auto;
+    padding: 0px;
+    width: 20%;
+    text-align: center;
+    font-size: auto;
+    z-index: 1;
+    margin-bottom: -140px;
+    margin-left: 40%;
+    background-color: rgb(37, 37, 39);
+}
+
+
+
 /* ----------------------------------- */
 /* testimonial.html */
 /* padding( top | right | bottom | left ) */
