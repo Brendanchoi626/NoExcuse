@@ -31,7 +31,7 @@ def all_routines():
 @app.route('/help/')
 def help():
     results = sqlite_conn('database.db', "select id, name from Exercise where Exercise.id in (select exercise_id from Help)")
-    return render_template('help.html', help_exercise=results)
+    return render_template('help.html', help=results)
 
 @app.route('/workout_help/<int:id>')
 def workouthelper(id):

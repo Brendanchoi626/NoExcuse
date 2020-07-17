@@ -13,12 +13,6 @@ html a{
     padding-left: 2%;
 }
 @media screen and (max-width: 1080px){
-    html{
-        font-size: smaller;
-    }
-    a{
-        font-size: smaller;
-    }
 }
 /*-------------------------------------*/
 /*styles Nav.html */
