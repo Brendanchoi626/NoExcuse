@@ -1,7 +1,9 @@
 {% extends 'layout.html' %}
 {% block content %}
+<div class="exercisenow">
     {% for result in results %}
         <!-- The help documentations for a crtain workout -->
         {{result[0]|safe}}
     {% endfor %}
+</div>
 {% endblock %}

@@ -12,7 +12,11 @@ html a{
 .title{
     padding-left: 2%;
 }
-@media screen and (max-width: 1080px){
+@media screen and (max-width : 1080px){
+    .exercisenow{
+    }
+}
+@media screen and (max-wi8dth : 900px){
 }
 /*-------------------------------------*/
 /*styles Nav.html */
@@ -284,16 +288,28 @@ footer p{
 }
 
 /*------------------------------------*/
-/*styles exercisenow.html*/
+/*styles exercisenow.html and workout_help.html*/
 .exercisenow{
     overflow: auto;
     width: 80%;
     height: auto;
-    margin-left: 10%;
+    margin: 0 0 0 10%;
 }
 .exercisenow video{
-    width:100%;
-    height:auto;
+    width: 100%;
+    height: auto;
+}
+.exercisenow_contenttxt{
+    width: 30%;
+    float: left;
+    height: auto;
+    background-color: rgb(50, 50, 50);
+    padding: 5%;
+}
+.exercisenow_contentvid{
+    width:60%;
+    float: left;
+    height: auto;
 }
 /*------------------------------------*/
 /*styles images_copyrights.html*/
