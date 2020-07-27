@@ -12,12 +12,7 @@ html a{
 .title{
     padding-left: 2%;
 }
-@media screen and (max-width : 1080px){
-    .exercisenow{
-    }
-}
-@media screen and (max-wi8dth : 900px){
-}
+
 /*-------------------------------------*/
 /*styles Nav.html */
 .navall{
@@ -118,12 +113,7 @@ nav ul {
     padding:0px;
     width: 100%;
 }
-.home_contents2 img{
-    width: 100%;
-    height: auto;
-    max-height: 720px;
-    z-index: 0;
-}
+
 .contents2{
     position: relative;
     color: white;
@@ -150,8 +140,11 @@ nav ul {
     margin-left: 40%;
     background-color: rgb(37, 37, 39);
 }
-
-
+.home_containor{
+    background-image: url("/static/pictures to be replaced/armsfolded-crop.jpg");
+    width:100%;
+    height: auto;
+}
 
 /* ----------------------------------- */
 /* testimonial.html */
@@ -269,7 +262,7 @@ footer p{
     width: 400px;
     height: auto;
     padding: 90px 30px;
-    visibility: hidden;
+    display: none;
     text-align: center;
     font-size: auto;
     z-index: 1;
@@ -284,32 +277,77 @@ footer p{
     bottom: 80px;
 }
 .routine_content:hover .routine_description{
-    visibility: visible;
+    display: block;
 }
 
 /*------------------------------------*/
 /*styles exercisenow.html and workout_help.html*/
 .exercisenow{
     overflow: auto;
-    width: 80%;
+    width: 90%;
     height: auto;
-    margin: 0 0 0 10%;
+    margin: 0 0 0 5%;
 }
 .exercisenow video{
     width: 100%;
-    height: auto;
 }
 .exercisenow_contenttxt{
     width: 30%;
     float: left;
     height: auto;
     background-color: rgb(50, 50, 50);
-    padding: 5%;
+    margin-bottom: 1.25%;
+    font-size: smaller;
+    padding: 5%;  
+    color: white;
+}
+.exercisenow_contenttxt_desc{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    overflow: auto;
+}
+.exercisenow_contenttxt_reps{
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    text-align: center;
 }
 .exercisenow_contentvid{
     width:60%;
     float: left;
     height: auto;
+    margin-bottom: 1%;
+}
+.wrapper{
+    display: flex;
+    max-height: 600px;
+}
+@media screen and (max-width : 1564px){
+    .exercisenow_contenttxt{
+        width: 38%;
+        padding: 1%;
+    }
+}
+@media screen and (max-width : 1203px){
+    .exercisenow_contenttxt{
+        width: 40%;
+        padding: none;
+    }
+}
+@media screen and (max-width : 1199px){
+    .wrapper{
+        display: block;
+    }
+    .exercisenow_contentvid{
+        width: 100%;
+        margin-bottom: -1%;
+    }
+    .exercisenow_contenttxt{
+        width: 96%;
+        margin: 0 0 2% 0;
+        padding: 2%;
+    }
 }
 /*------------------------------------*/
 /*styles images_copyrights.html*/

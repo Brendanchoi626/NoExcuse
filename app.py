@@ -26,8 +26,7 @@ def home():
 @app.route('/routine/')
 def all_routines():
     results = sqlite_conn('database.db', "SELECT * FROM Routine")
-    description = sqlite_conn('database.db', "SELECT Routine.decscription from Routine")
-    return render_template('routine.html', routines=results, description=description)
+    return render_template('routine.html', routines=results)
 # help page
 @app.route('/help/')
 def help():
