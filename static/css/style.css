@@ -70,39 +70,30 @@ nav ul {
 }
 /*-------------------------------------*/
 /*styles home.html*/
-.homepic{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;    
-}
-.homepic video{
-    width: 100%;
-    height: auto;
-}
 /* image and text combination layout */
 .home_contents{
     display: flex;
-    justify-content: space-evenly;
     width: 100%;
     height: auto;
-    margin: 20px 0px 20px 0px;
-    padding: 0px;
+    margin: none;
+    padding: 8% 0 8% 0;
 }
 .home_contents img{
-    position: relative;
     width: 100%;
+    height: auto;
 }
 .home_content{
-    width: 600px;
+    width: 45%;
+    margin: 0 2.5% 0 2.5%;
     height: auto;
-    position: relative;
 }
 .home_content a{
     display: block;
     background-color: rgb(37, 37, 39);
     color: white;
     min-width: 50px;
-    width: 180px;
+    min-height: 50px;;
+    width: 50%;
     height:auto;
     text-align: center;
 }
@@ -113,8 +104,11 @@ nav ul {
     padding:0px;
     width: 100%;
 }
-
-.contents2{
+.home_contents2 img{
+    width: 100%;
+    height: auto;
+}
+.home_content2{
     position: relative;
     color: white;
     align-content: center;
@@ -124,28 +118,71 @@ nav ul {
     text-align: center;
     font-size: auto;
     z-index: 1;
-    margin-bottom: -140px;
+    /* margin-bottom: -140px; */
 }
 .contents{
     position: relative;
     color: white;
     top: -130px;
-    height: auto;
-    padding: 0px;
-    width: 20%;
+    height: 220px;
+    width: 50%;
     text-align: center;
     font-size: auto;
     z-index: 1;
-    margin-bottom: -140px;
-    margin-left: 40%;
+
+    background-color: rgb(50, 50, 50);
+}
+.contents video{
+    width: auto;
+    height: 100%;
+    padding: none;
+}
+/* bar over image layout */
+.home_container{
+    width:60%;
+    height: auto;
+    display: flex;
+    margin-left: 20%;
+}
+.home_bg{
     background-color: rgb(37, 37, 39);
 }
-.home_containor{
-    background-image: url("/static/pictures to be replaced/armsfolded-crop.jpg");
-    width:100%;
-    height: auto;
+.home_bg2{
+    background-color: whitesmoke;
 }
-
+@media screen and (max-width : 1679px){
+    .contents{
+        font-size: smaller;
+        height: 200px;
+    }
+}
+@media screen and (max-width : 1564px){
+    .exercisenow_contenttxt{
+        width: 38%;
+        padding: 1%;
+    }
+    
+}
+@media screen and (max-width : 1203px){
+    .exercisenow_contenttxt{
+        width: 40%;
+        padding: none;
+    }
+}
+@media screen and (max-width : 1199px){
+    .wrapper{
+        display: block;
+    }
+    .exercisenow_contentvid{
+        width: 100%;
+        margin-bottom: -1%;
+    }
+    .exercisenow_contenttxt{
+        width: 96%;
+        margin: 0 0 2% 0;
+        padding: 2%;
+    }
+}
 /* ----------------------------------- */
 /* testimonial.html */
 /* padding( top | right | bottom | left ) */
@@ -322,32 +359,6 @@ footer p{
 .wrapper{
     display: flex;
     max-height: 600px;
-}
-@media screen and (max-width : 1564px){
-    .exercisenow_contenttxt{
-        width: 38%;
-        padding: 1%;
-    }
-}
-@media screen and (max-width : 1203px){
-    .exercisenow_contenttxt{
-        width: 40%;
-        padding: none;
-    }
-}
-@media screen and (max-width : 1199px){
-    .wrapper{
-        display: block;
-    }
-    .exercisenow_contentvid{
-        width: 100%;
-        margin-bottom: -1%;
-    }
-    .exercisenow_contenttxt{
-        width: 96%;
-        margin: 0 0 2% 0;
-        padding: 2%;
-    }
 }
 /*------------------------------------*/
 /*styles images_copyrights.html*/
