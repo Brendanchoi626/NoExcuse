@@ -92,7 +92,7 @@ nav ul {
     background-color: rgb(37, 37, 39);
     color: white;
     min-width: 50px;
-    min-height: 50px;;
+    min-height: 30px;;
     width: 50%;
     height:auto;
     text-align: center;
@@ -103,6 +103,10 @@ nav ul {
     margin-right: auto;
     padding:0px;
     width: 100%;
+    background-color: rgb(37, 37, 39);
+}
+.home_contents2 a{
+    color: white;
 }
 .home_contents2 img{
     width: 100%;
@@ -110,7 +114,6 @@ nav ul {
 }
 .home_content2{
     position: relative;
-    color: white;
     align-content: center;
     top: -350px;
     height: auto;
@@ -118,6 +121,7 @@ nav ul {
     text-align: center;
     font-size: auto;
     z-index: 1;
+
     /* margin-bottom: -140px; */
 }
 .contents{
@@ -125,17 +129,28 @@ nav ul {
     color: white;
     top: -130px;
     height: 220px;
-    width: 50%;
+    width: 100%;
     text-align: center;
     font-size: auto;
     z-index: 1;
-
+    text-decoration: none;
     background-color: rgb(50, 50, 50);
+    display: inline-block;
+
+}
+.contents a{
+    width: 100%;
+    display:block;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+}
+.contents:hover, .home_content a:hover{
+    background-color: rgb(71, 70, 70);
 }
 .contents video{
     width: auto;
     height: 100%;
-    padding: none;
 }
 /* bar over image layout */
 .home_container{
@@ -144,45 +159,67 @@ nav ul {
     display: flex;
     margin-left: 20%;
 }
+/* Different backgrounds for the homepage */
 .home_bg{
     background-color: rgb(37, 37, 39);
 }
 .home_bg2{
     background-color: whitesmoke;
 }
-@media screen and (max-width : 1679px){
-    .contents{
-        font-size: smaller;
-        height: 200px;
-    }
+/* Online css for the slidshow gallery */
+.mySlides {display: none;
+    box-sizing: border-box;
 }
-@media screen and (max-width : 1564px){
-    .exercisenow_contenttxt{
-        width: 38%;
-        padding: 1%;
-    }
-    
+.mySlides img{
+    vertical-align: middle;
 }
-@media screen and (max-width : 1203px){
-    .exercisenow_contenttxt{
-        width: 40%;
-        padding: none;
-    }
-}
-@media screen and (max-width : 1199px){
-    .wrapper{
-        display: block;
-    }
-    .exercisenow_contentvid{
-        width: 100%;
-        margin-bottom: -1%;
-    }
-    .exercisenow_contenttxt{
-        width: 96%;
-        margin: 0 0 2% 0;
-        padding: 2%;
-    }
-}
+/* Slideshow container */
+.slideshow-container {
+    margin: auto;
+  }
+  
+  /* Caption text */
+.slideshow_text {
+    color: #f2f2f2;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 200;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
 /* ----------------------------------- */
 /* testimonial.html */
 /* padding( top | right | bottom | left ) */
@@ -453,3 +490,84 @@ footer p{
 }
 /*-------------------------------------*/
 /*about.html*/
+/* ----------------------------------- */
+/* media queries */
+@media screen and (max-width : 1679px){
+    /* home */
+    .contents{
+        font-size: smaller;
+        height: 200px;
+    }
+    .slideshow_text{
+        bottom: 500px
+    }
+}
+@media screen and (max-width : 1564px){
+    /* exercisenow */
+    .exercisenow_contenttxt{
+        width: 38%;
+        padding: 1%;
+    }  
+    
+}
+@media screen and (max-width : 1236px){
+    /* exercisenow */
+    .exercisenow_contenttxt{
+        width: 40%;
+        padding: none;
+        /* home */
+    }
+    .contents{
+        top: 0px;
+        max-height: 200px;
+        width: auto;
+    }
+    .home_container{
+        width: 100%;
+        margin: 0;
+    }
+
+}
+@media screen and (max-width : 1199px){
+    /* exercisenow */
+    .wrapper{
+        display: block;
+    }
+    .exercisenow_contentvid{
+        width: 100%;
+        margin-bottom: -1%;
+    }
+    .exercisenow_contenttxt{
+        width: 96%;
+        margin: 0 0 2% 0;
+        padding: 2%;
+    }
+    /* home.html */
+    .home_content2{
+        top: -200px;
+        font-size: smaller;
+    }
+    
+}
+@media screen and (max-width : 750px) {
+    /* home */
+    .contents video{
+        display: none;
+    }
+    .slideshow_text{
+        bottom: 600px
+    }
+    .home_content2{
+        top: -120px;
+        font-size: x-small;
+    }
+    /* nav */
+    .logo img{
+        height: 90px;
+        width: 180px;
+    }
+    .navbar .nav_other{
+        display: none;
+    }
+    
+}

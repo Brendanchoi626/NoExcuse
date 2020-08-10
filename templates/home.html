@@ -4,70 +4,116 @@
 
     <div class="home_bg">
     <!-- Lays out stuffs in page as 2 elements, image and texts next to each other -->
-    <div class="home_contents2">
-        <img src="/static/pictures to be replaced/armsfolded-crop.jpg">
+    <div class="home_contents2">       
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="/static/pictures to be replaced/armsfolded-crop.jpg" style="width:100%">
+              <div class="slideshow_text">Workout with NoExcuse</div>
+            </div>            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="/static/pictures to be replaced/backflex-crop.jpg" style="width:100%">
+              <div class="slideshow_text">Make your body fit!</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="/static/pictures to be replaced/frontflex-crop.jpg" style="width:100%">
+              <div class="slideshow_text">Become stronger!</div>
+            </div> 
+        </div> 
         <div class="home_container">
-        <div class="contents">
-            <h2>Workout at home Free!</h2>
-                <p>NoExcuse contains many exercise routines which are premade for you
-                    which most of it could just be done at home!
-                </p>
-            <a href="/routine"><p>Browse free routines</p></a>          
+        <div class="contents"> 
+            <!-- Left side box in home -->           
+                <a href="/routine"><h2>Workout at home Free!</h2>
+                    <p>NoExcuse contains many exercise routines which are premade for you
+                        which most of it could just be done at home!
+                    </p><p>Browse free routines</p></a>         
         </div>
         <div class="contents">
+            <!-- middle box in home -->
             <video autoplay loop muted>
                 <!-- videos selected randomly from a folder is played in the home page.  -->
             <source src="/static/videos with inspirational qoutes/{{randvid}}" type="video/mp4">
             </video>
         </div>
         <div class="contents">
-            <h2>Workout is too hard??</h2>
-            <p>NoXecuse includes many of the free exercises that are relatively 
-                easier to do, which will help you a lot!
-            </p>
-            <a href="/help"><p>Browse easier exercises</p></a>
+            <!-- right side boxin home -->           
+            <a href="/help"><h2>Workout is too hard??</h2>
+                <p>NoExcuse includes many of the free exercises that are relatively 
+                    easier to do, which will help you a lot!
+                </p>
+                <p>Browse easier exercises</p></a>
         </div>       
+        </div>
     </div>
-    </div>
-    </div>
-
     <div class="home_bg2">
-    <!-- section -->
+    <!-- section2-->
     <div class="home_contents">
         <div class="home_content">
+            <!-- picture on the left side -->
             <img src="/static/pictures to be replaced/questionable.png">
         </div>
         <div class="home_content">
-            <h2>Not Sure Where to Start?</h2>
-            <p>Here are some suggestions that we have for you!
-            </p>
-            <a href="/exercisenow/1"><p>Start from basic! -> Arm</p></a>
-            <a href="/exercisenow/6"><p>You don't have time? -> 10 min fire!</p></a>
-            <a href="/exercisenow/9"><p>Ready to challenge yourself? -> 5 min destroyer</p></a>
+            <!-- contents on the right -->
+                <h2>Not Sure Where to Start?</h2>
+                <p>Here are some suggestions that we have for you!
+                </p>
+                <a href="/exercisenow/1"><p>Start from basic!></p></a>
+                <a href="/exercisenow/5"><p>Train your abs!></p></a>
+                <a href="/exercisenow/9"><p>Need a bit of challenge?></p></a>
         </div>
     </div>
-</div>
-    <!-- displays taxt over a big chunk of image -->
+    </div>
+    <!-- Section 3 -->
     <div class="home_contents2">
-            <img src="/static/pictures to be replaced/Screenshot (39).png" width="1920" height="1080">
+        <!-- picture -->
+            <a href="/testimonial"><img src="/static/pictures to be replaced/Screenshot (39).png" width="1920" height="1080"></a>
+            <!-- contents inside the picture -->
             <div class="home_content2">
-                <h2>Everyone starts from 0</h2>
+                <a href="/testimonial">
+                <h1>Everyone starts from 0</h1>
                 <p>Perserverance is the key</p>
-                <a href="/testimonial"><p>testimonial</p></a>
+                <p>testimonial</p></a>
             </div>
     </div>
     
-     <!-- section -->
+     <!-- section4 -->
+    <div class="home_bg2">
     <div class="home_contents">
+        <!-- contents on left -->
         <div class="home_content">
-        <h2>NoExcuse is a workout helping website for people who
-            wants to exercise, but doesn't know what to do. </h2>
+        <h2>NoExcuse is a workout helping website for all people
+            that doesn't work for profit
+        </h2>
         <a href="/about"><p>About NoExcuse</p></a>
         </div>
         <div class="home_content">
-            <img src="/static/pictures to be replaced/black.jpg">
+            <!-- contents on right -->
+            <img src="/static/logo/1587433454993.png">
         </div>
     </div>
+    </div>
 </div>
+<script>
+// Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto
+    var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; //hides an image which is not in its turn
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}   
+      slides[slideIndex-1].style.display = "block"; //diplay an image in order
+      setTimeout(showSlides, 10000); // Change image every 2 seconds
+    }
+</script>
+
+
 
 {% endblock %}
