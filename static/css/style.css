@@ -1,4 +1,6 @@
+/*------------------------------------------------------------------------------------------------------------------------------------*/
 /*Styles the whole page*/
+/*------------------------------------------------------------------------------------------------------------------------------------*/
 html{
     box-sizing: border-box; 
     margin: 0;
@@ -12,15 +14,21 @@ html a{
 .title{
     padding-left: 2%;
 }
-
-/*-------------------------------------*/
+.darkbg{
+    background-color: rgb(37, 37, 39);
+}
+.lightbg{
+    background-color: whitesmoke;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
 /*styles Nav.html */
-.navall{
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+.navall{/* styles all of the nav.html */ 
     display: flex;
     align-items: center;
     padding: 30px 10%;
 }
-nav{
+nav{/* width, background of the nav bar */
     list-style-type: none;
     margin: 1px;
     padding: 0;
@@ -28,7 +36,7 @@ nav{
     background-color: rgb(37, 37, 39);
     width: 100%;
 }
-.logo{
+.logo{/* Basic layouts of navbar */
     margin-left: 10px;
     cursor: pointer;
 }
@@ -48,17 +56,15 @@ nav ul {
     padding: 20px 15px;
     text-decoration: none;
     font-size: large;
-
 } 
-.navbar li a:hover {
+.navbar li a:hover {/* colour change on hover */
     background-color: rgb(71, 70, 70); 
 }
-.dropdown_content{
+.dropdown_content{/* Dropdown content on hover of Exercise button. */
     position: absolute;
     box-shadow: 0px 8px 16px 0px;
     display: none;
     background-color: rgb(50, 50, 50);
-
 }
 .dropdown_content a{
     color: white;
@@ -68,19 +74,156 @@ nav ul {
 .dropdown:hover .dropdown_content{
     display: block;
 }
-/*-------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+/*styles exercisenow.html and workout_help.html*/
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+.exercise_layout{/* page layout of exercise page */
+    overflow: auto;
+    width: 90%;
+    height: auto;
+    margin: 0 0 0 5%;
+}
+.exercise_layout_element{/* Contents layout with video and text next to each other. */
+    display: flex;
+    max-height: 600px;
+}
+.exercise_layout_element_text{
+    width: 30%;
+    float: left;
+    height: auto;
+    background-color: rgb(50, 50, 50);
+    margin-bottom: 1.25%;
+    font-size: smaller;
+    padding: 5%;  
+    color: white;
+}
+.exercise_layout_element_text_desc{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    overflow: auto;
+}
+.exercise_layout_element_vid{
+    width:60%;
+    float: left;
+    height: auto;
+    margin-bottom: 1%;
+}
+.exercise_layout video{
+    width: 100%;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+/*styles routine.html, help.html and images_copyrights.html*/
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+/*refereced from pop-up css affect from https://www.youtube.com/watch?v=k5fpqtOD530*/
+.gridview_layout *, .gridview_layout *::after, *::before{/* This styles all of the gridview_layout, its after and before attribute */ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+.gridview_layout a p{
+    text-align: center;
+    padding: 20px;
+    border: 0.5px solid rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    background-color: white;
+}
+.gridview_layout {/*       displays the contents in grid, while keeping the*/
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    width: 100%;
+    height: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.gridview_layout_element{/*size of the images the same. This line also automatically positions thecontent in the page when it resizes.  */
+    width: 400px;
+    height: auto;
+    position: relative;
+    background-color: white;
+    margin: 10px auto;
+    z-index: 0;
+}
+.gridview_layout_element img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+    padding: auto;
+}
+.gridview_layout video{
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+.gridview_layout_element::before, .gridview_layout_element::after{/*specifies the position of the content that appears in certain action(hover in this case)*/
+    content:"";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 85px;
+    transition: all 0.5s ease-out;
+}
+.gridview_layout_element::before{/* Creates the while border that appears and disappears in a certain action (hover in this case below) */
+    border-top: 2px groove white;
+    border-bottom: 2px groove white;
+    transform: scale(0,1);
+}
+.gridview_layout_element::after{
+    border-top: 2px groove white;
+    border-bottom: 2px groove white;
+    transform: scale(1,0);
+}
+.gridview_layout_element:hover::before{/* Creates the transition motion affect on the routine page, that is set in the code above */
+    background-color: rgba(0,0,0,0.4);
+    transform: scale(1, 1);
+}
+.gridview_layout_element:hover::after{
+    background-color: rgba(0,0,0,0.4);
+    transform: scale(1, 1);
+}
+.gridview_layout_element_text{/* styles the box + text created by transition motion */
+    position: absolute;
+    color: white;
+    bottom: 0;
+    top: 10px;
+    width: 400px;
+    height: auto;
+    padding: 90px 30px;
+    display: none;
+    text-align: center;
+    font-size: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+.gridview_layout_element_text a::after{
+    text-decoration:none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 10px;
+    bottom: 80px;
+}
+.gridview_layout_element:hover .gridview_layout_element_text{/* show hidden information on hover*/
+    display: block;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
 /*styles home.html*/
-/* image and text combination layout */
-.home_contents{
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+.home_txtnexttoimg img, .home_txtoverimg img{
+    width: 100%;
+    height: auto;
+}
+.home_txtnexttoimg{/* image and text combination layout */
     display: flex;
     width: 100%;
     height: auto;
     margin: none;
     padding: 8% 0 8% 0;
-}
-.home_contents img{
-    width: 100%;
-    height: auto;
 }
 .home_content{
     width: 45%;
@@ -97,20 +240,15 @@ nav ul {
     height:auto;
     text-align: center;
 }
-/* Text over image layout */
-.home_contents2{
+.home_txtoverimg{/* Text over image layout */
     margin-left: auto;
     margin-right: auto;
     padding:0px;
     width: 100%;
     background-color: rgb(37, 37, 39);
 }
-.home_contents2 a{
+.home_txtoverimg a{
     color: white;
-}
-.home_contents2 img{
-    width: 100%;
-    height: auto;
 }
 .home_content2{
     position: relative;
@@ -121,10 +259,8 @@ nav ul {
     text-align: center;
     font-size: auto;
     z-index: 1;
-
-    /* margin-bottom: -140px; */
 }
-.contents{
+.home_container_content{
     position: relative;
     color: white;
     top: -130px;
@@ -136,50 +272,38 @@ nav ul {
     text-decoration: none;
     background-color: rgb(50, 50, 50);
     display: inline-block;
-
 }
-.contents a{
+.home_container_content a{
     width: 100%;
     display:block;
     color:white;
     text-align: center;
     text-decoration: none;
 }
-.contents:hover, .home_content a:hover{
+.home_container_content:hover, .home_content a:hover{
     background-color: rgb(71, 70, 70);
 }
-.contents video{
+.home_container_content video{
     width: auto;
     height: 100%;
 }
-/* bar over image layout */
-.home_container{
+.home_container{/* bar over image layout */
     width:60%;
     height: auto;
     display: flex;
     margin-left: 20%;
 }
-/* Different backgrounds for the homepage */
-.home_bg{
-    background-color: rgb(37, 37, 39);
-}
-.home_bg2{
-    background-color: whitesmoke;
-}
-/* Online css for the slidshow gallery */
-.mySlides {display: none;
+.slideshow_element {/* Online css for the slidshow gallery */
+    display: none;
     box-sizing: border-box;
 }
-.mySlides img{
+.slideshow_element img{
     vertical-align: middle;
 }
-/* Slideshow container */
-.slideshow-container {
+.slideshow_container {/* Slideshow container */
     margin: auto;
-  }
-  
-  /* Caption text */
-.slideshow_text {
+} 
+.slideshow_text {/* Caption text */
     color: #f2f2f2;
     font-size: 30px;
     padding: 8px 12px;
@@ -187,61 +311,52 @@ nav ul {
     bottom: 400px;
     width: 100%;
     text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
+}
+.slideshow_numbertext {/* Number text (1/3 etc) */
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 200;
-  }
-  
-  .active {
+}  
+.active {
     background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
+} 
+.fade {/* Fading animation */
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
+    /* Plays it for 1.5seconds */
+}  
+@keyframes fade { /* Requests for browser support */
+    /* Plays the fading animation from above */ 
     from {opacity: .4} 
     to {opacity: 1}
-  }
-  
-  @keyframes fade {
+    /* The above code shows the transparency of the fading animation. 
+    0 being colourless and 1 being vivid.*/
+}
+@-webkit-keyframes fade {
+    /* Same as above but used to request chrome browser support on fade animation */
     from {opacity: .4} 
     to {opacity: 1}
-  }
-
-/* ----------------------------------- */
-/* testimonial.html */
-/* padding( top | right | bottom | left ) */
-.testimonial{
+}  
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+/* Styles testimonial and about.html */
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+.information_layout{
     width: 80%;
     height: auto;
-    padding: 0% 10% 0% 10%;
+    padding: 0 10% 0 10%;
 }
-/* ----------------------------------- */
-/* about.html */
-.about{
-    width: 80%;
-    height: auto;
-    padding: 0% 10% 0% 10%;
-}
-.about_content img{
+.information_layout_element img{
     width: 100%;
     height: auto;
     background-color: rgb(37, 37, 39);
 }
-/*-------------------------------------*/
-/*styles footer.html*/
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+/*Styles footer.html*/
+/*------------------------------------------------------------------------------------------------------------------------------------*/
 footer{
     background-color: rgb(71, 70, 70);
     align-items: center;
@@ -249,252 +364,18 @@ footer{
 footer a{
     color: white;
     text-align: center;
-    margin-top: 10px;
-    margin-left:30px;
     text-decoration: none;
+    padding: 10px 0 0 10px;
 }
 footer p{
     text-align: center;   
 }
-/*------------------------------------*/
-/*styles routine.html*/
-/*refereced from pop-up css affect from https://www.youtube.com/watch?v=k5fpqtOD530*/
-.routine *, .routine *::after, *::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Tahoma, sans-serif;
-}
-.routine a p{
-    text-align: center;
-    padding: 20px;
-    border: 0.5px solid rgba(0, 0, 0, 0.8);
-    text-decoration: none;
-    font-size: large;
-    font-weight: bold;
-    background-color: white;
-}
-.routine {
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /*displays the contents in grid, while keeping the*/
-    /*size of the images the same. This line also automatically positions thecontent in the page when it resizes.  */
-    width: 100%;
-    height: auto;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-}
-.routine_content{
-    width: 400px;
-    height: auto;
-    position: relative;
-    background-color: white;
-    margin: 10px auto;
-    z-index: 0;
-}
-.routine_content img{
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin: auto;
-    padding: auto;
-}
-/*specifies the position of the content that appears in certain action(hover in this case)*/
-.routine_content::before, .routine_content::after{
-    content:"";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 85px;
-    transition: all 0.5s ease-out;
-}
-/* Creates the while border that appears and disappears in a certain action (hover in this case below) */
-.routine_content::before{
-    border-top: 2px groove white;
-    border-bottom: 2px groove white;
-    transform: scale(0,1);
-}
-.routine_content::after{
-    border-top: 2px groove white;
-    border-bottom: 2px groove white;
-    transform: scale(1,0);
-}
-/* Creates the transition motion affect on the routine page, that is set in the code above */
-.routine_content:hover::before{
-    background-color: rgba(0,0,0,0.4);
-    transform: scale(1, 1);
-}
-.routine_content:hover::after{
-    background-color: rgba(0,0,0,0.4);
-    transform: scale(1, 1);
-}
-.routine_description{
-    position: absolute;
-    color: white;
-    bottom: 0;
-    top: 10px;
-    width: 400px;
-    height: auto;
-    padding: 90px 30px;
-    display: none;
-    text-align: center;
-    font-size: auto;
-    z-index: 1;
-    pointer-events: none;
-}
-.routine_description a::after{
-    text-decoration:none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: 10px;
-    bottom: 80px;
-}
-.routine_content:hover .routine_description{
-    display: block;
-}
-
-/*------------------------------------*/
-/*styles exercisenow.html and workout_help.html*/
-.exercisenow{
-    overflow: auto;
-    width: 90%;
-    height: auto;
-    margin: 0 0 0 5%;
-}
-.exercisenow video{
-    width: 100%;
-}
-.exercisenow_contenttxt{
-    width: 30%;
-    float: left;
-    height: auto;
-    background-color: rgb(50, 50, 50);
-    margin-bottom: 1.25%;
-    font-size: smaller;
-    padding: 5%;  
-    color: white;
-}
-.exercisenow_contenttxt_desc{
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    overflow: auto;
-}
-.exercisenow_contenttxt_reps{
-    width: 100%;
-    height: 20%;
-    justify-content: center;
-    text-align: center;
-}
-.exercisenow_contentvid{
-    width:60%;
-    float: left;
-    height: auto;
-    margin-bottom: 1%;
-}
-.wrapper{
-    display: flex;
-    max-height: 600px;
-}
-/*------------------------------------*/
-/*styles images_copyrights.html*/
-.container *, .container *::after, *::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Tahoma, sans-serif;
-}
-.container{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    width: 100%;
-    height: auto;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-}
-.box{
-    width: 400px;
-    height: auto;
-    position: relative;
-    background-color: white;
-    margin: 10px auto;
-    z-index: 0;
-}
-.container video{
-    width: 100%;
-    height: auto;
-    z-index: 0;
-}
-.box img{
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-/*specifies the position of the content that appears in certain action(hover in this case)*/
-.box::before, .box::after{
-    content:"";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    transition: all 0.5s ease-out;
-}
-/* Creates the while border that appears and disappears in a certain action (hover in this case below) */
-.box::before{
-    border-top: 2px groove white;
-    border-bottom: 2px groove white;
-    transform: scale(0,1);
-}
-.box::after{
-    border-top: 2px groove white;
-    border-bottom: 2px groove white;
-    transform: scale(1,0);
-}
-/* Creates the transition motion affect on the routine page, that is set in the code above */
-.box:hover::before{
-    background-color: rgba(0,0,0,0.4);
-    transform: scale(1, 1);
-}
-.box:hover::after{
-    background-color: rgba(0,0,0,0.4);
-    transform: scale(1, 1);
-}
-.imgtext{
-    position: absolute;
-    color: white;
-    bottom: 0;
-    width: 400px;
-    height: auto;
-    padding: 90px 30px;
-    display: none;
-    text-align: center;
-    z-index: 1;
-}
-.box:hover .imgtext{
-    display: block;
-}
-/*-------------------------------------*/
-/*styles help.html*/
-.help{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    width: 100%;
-    height: auto;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-}
-.help a{
-    text-align: center;
-}
-/*-------------------------------------*/
-/*about.html*/
-/* ----------------------------------- */
-/* media queries */
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+/* media queries for responsive lwebsite layout */
+/*------------------------------------------------------------------------------------------------------------------------------------*/
 @media screen and (max-width : 1679px){
     /* home */
-    .contents{
+    .home_container_content{
         font-size: smaller;
         height: 200px;
     }
@@ -504,20 +385,19 @@ footer p{
 }
 @media screen and (max-width : 1564px){
     /* exercisenow */
-    .exercisenow_contenttxt{
+    .exercise_layout_element_text{
         width: 38%;
         padding: 1%;
-    }  
-    
+    }   
 }
 @media screen and (max-width : 1236px){
     /* exercisenow */
-    .exercisenow_contenttxt{
+    .exercise_layout_element_text{
         width: 40%;
         padding: none;
         /* home */
     }
-    .contents{
+    .home_container_content{
         top: 0px;
         max-height: 200px;
         width: auto;
@@ -526,18 +406,17 @@ footer p{
         width: 100%;
         margin: 0;
     }
-
 }
 @media screen and (max-width : 1199px){
     /* exercisenow */
-    .wrapper{
+    .exercise_layout_element{
         display: block;
     }
-    .exercisenow_contentvid{
+    .exercise_layout_element_vid{
         width: 100%;
         margin-bottom: -1%;
     }
-    .exercisenow_contenttxt{
+    .exercise_layout_element_text{
         width: 96%;
         margin: 0 0 2% 0;
         padding: 2%;
@@ -547,11 +426,10 @@ footer p{
         top: -200px;
         font-size: smaller;
     }
-    
 }
 @media screen and (max-width : 750px) {
     /* home */
-    .contents video{
+    .home_container_content video{
         display: none;
     }
     .slideshow_text{
@@ -569,5 +447,7 @@ footer p{
     .navbar .nav_other{
         display: none;
     }
-    
 }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/

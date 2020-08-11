@@ -1,20 +1,19 @@
 {% extends 'layout.html' %}
 
 {% block content %}   
-    <div class="exercisenow">
+    <div class="exercise_layout">
         <!-- Description of a selected routine -->
         {{description|safe}}
         <!-- shows the details of the selected workout-->
         {% for exercise in exercisenow %}
-        <div class="wrapper">
-            <div class="exercisenow_contentvid">
+        <div class="exercise_layout_element">
+            <div class="exercise_layout_element_vid">
                 <!-- The instruction video for the certain exercise -->
                 <video controls><source src="/static/Exercise_Video/{{exercise[0]}}.mp4" type="video/mp4"></video>
-            </div>
-            
-            <div class="exercisenow_contenttxt">
+            </div>         
+            <div class="exercise_layout_element_text">
                 <!-- The specific description of a specific exercise. -->
-                <div class="exercisenow_contenttxt_desc">
+                <div class="exercise_layout_element_text_desc">
                     <p>{{exercise[4]|safe}} </p>
                 </div>
                 <!-- currently not using for the better layout -->
