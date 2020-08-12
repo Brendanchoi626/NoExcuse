@@ -1,50 +1,45 @@
 {% extends 'layout.html' %}
-
 {% block content %}
-    <h1 class="title"><strong>Cannot perform an exercise? We can help.</strong></h1>
-    <div class="gridview_layout">
-        <div class="gridview_layout_element">
-            <!-- returns all the links that leads to a specific workout help page -->          
-            <a href="/workout_help/{{ (help[0])[0] }}"><img src="/static/pictures to be replaced/{{ (help[0])[1] }}.jpg" height="400px" width="400px"><p>{{ (help[0])[1] }}</p></a>
-            <div class="gridview_layout_element_text"> 
-                <p>Help and alteratives for {{ (help[0])[1] }}</p> 
-            </div>
+<!-- html for help page -->
+<h1 class="title"><strong>Cannot perform an exercise? We can help.</strong></h1>
+<div class="gridview_layout"><!-- Page is layed out in a grid format -->
+    <div class="gridview_layout_element"><!-- contents are here -->         
+        <a href="/workout_help/{{ (help[0])[0] }}"><!-- description of a specific help, it's image and its link -->
+        <img src="/static/pictures to be replaced/{{ (help[0])[1] }}.jpg" height="400px" width="400px"><p>{{ (help[0])[1] }}</p></a>
+        <div class="gridview_layout_element_text"><!-- text in here will appear with fade affect on Hover -->
+            <p>Help and alteratives for {{ (help[0])[1] }}</p> 
         </div>
-        <div class="gridview_layout_element">
-            <!-- returns all the links that leads to a specific workout help page -->          
-            <a href="/workout_help/{{(help[1])[0]}}"><img src="/static/pictures to be replaced/{{ (help[1])[1] }}.jpg" height="400px" width="400px"><p>{{ (help[1])[1] }}</p></a>
-            <div class="gridview_layout_element_text"> 
-                <p>Help and alteratives for {{ (help[1])[1] }}</p> 
-            </div>
-        </div>
-        <div class="gridview_layout_element">
-            <!-- returns all the links that leads to a specific workout help page -->          
-            <a href="/workout_help/{{(help[2])[0]}}"><img src="/static/pictures to be replaced/{{ (help[2])[1] }}.jpg" height="400px" width="400px"><p>{{ (help[2])[1] }}</p></a>
-            <div class="gridview_layout_element_text"> 
-                <p>Help and alteratives for {{ (help[2])[1] }}</p> 
-            </div>
-        </div>
-        <div class="gridview_layout_element">
-            <!-- returns all the links that leads to a specific workout help page -->          
-            <a href="/workout_help/{{(help[3])[0]}}"><img src="/static/pictures to be replaced/{{ (help[3])[1] }}.jpg" height="400px" width="400px"><p>{{ (help[3])[1] }}</p></a>
-            <div class="gridview_layout_element_text"> 
-                <p>Help and alteratives for {{ (help[3])[1] }}</p> 
-            </div>
-        </div>
-        <div class="gridview_layout_element">
-            <!-- returns all the links that leads to a specific workout help page -->          
-            <a href="/workout_help/{{(help[4])[0]}}"><img src="/static/pictures to be replaced/{{ (help[4])[1] }}.jpg" height="400px" width="400px"><p>{{ (help[4])[1] }}</p></a>
-            <div class="gridview_layout_element_text"> 
-                <p>Help and alteratives for {{ (help[4])[1] }}</p> 
-            </div>
-        </div>
-        <div class="gridview_layout_element">
-            <!-- returns all the links that leads to a specific workout help page -->          
-            <a href="/workout_help/{{(help[5])[0]}}"><img src="/static/pictures to be replaced/{{ (help[5])[1] }}.jpg" height="400px" width="400px"><p>{{ (help[5])[1] }}</p></a>
-            <div class="gridview_layout_element_text"> 
-                <p>Help and alteratives for {{ (help[5])[1] }}</p> 
-            </div>
-        </div>
-
     </div>
+    <div class="gridview_layout_element">        
+        <a href="/workout_help/{{(help[1])[0]}}"><img src="/static/pictures to be replaced/{{ (help[1])[1] }}.jpg" height="400px" width="400px"><p>{{ (help[1])[1] }}</p></a>
+        <div class="gridview_layout_element_text"> 
+            <p>Help and alteratives for {{ (help[1])[1] }}</p> 
+        </div>
+    </div>
+    <div class="gridview_layout_element">        
+        <a href="/workout_help/{{(help[2])[0]}}"><img src="/static/pictures to be replaced/{{ (help[2])[1] }}.jpg" height="400px" width="400px"><p>{{ (help[2])[1] }}</p></a>
+        <div class="gridview_layout_element_text"> 
+            <p>Help and alteratives for {{ (help[2])[1] }}</p> 
+        </div>
+    </div>
+    <div class="gridview_layout_element">        
+        <a href="/workout_help/{{(help[3])[0]}}"><img src="/static/pictures to be replaced/{{ (help[3])[1] }}.jpg" height="400px" width="400px"><p>{{ (help[3])[1] }}</p></a>
+        <div class="gridview_layout_element_text"> 
+            <p>Help and alteratives for {{ (help[3])[1] }}</p> 
+        </div>
+    </div>
+    <div class="gridview_layout_element">         
+        <a href="/workout_help/{{(help[4])[0]}}"><img src="/static/pictures to be replaced/{{ (help[4])[1] }}.jpg" height="400px" width="400px"><p>{{ (help[4])[1] }}</p></a>
+        <div class="gridview_layout_element_text"> 
+            <p>Help and alteratives for {{ (help[4])[1] }}</p> 
+        </div>
+    </div>
+    <div class="gridview_layout_element">        
+        <a href="/workout_help/{{(help[5])[0]}}"><img src="/static/pictures to be replaced/{{ (help[5])[1] }}.jpg" height="400px" width="400px"><p>{{ (help[5])[1] }}</p></a>
+        <div class="gridview_layout_element_text"> 
+            <p>Help and alteratives for {{ (help[5])[1] }}</p> 
+        </div>
+    </div>
+
+</div>
 {% endblock %} 

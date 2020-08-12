@@ -1,9 +1,9 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class="exercise_layout">
+<!-- html for workout help page -->
+<div class="exercise_layout"><!-- page layout for exercise page width 90%-->
     {% for result in results %}
-        <!-- The help documentations for a certain workout -->
-        {{result[0]|safe}}
+        {{result[0]|safe}}<!-- The help documentations for a certain workout -->
     {% endfor %}
 </div>
 {% endblock %}

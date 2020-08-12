@@ -1,18 +1,17 @@
 {% extends 'layout.html' %}
-
 {% block content %}
+<!-- html for the image copyright page -->
+<!-- Section 1 -->
+<!-- Resource for the videos that I have made with modifications -->
 <h1>Image Sources</h1>
 <h3>Moving images on HomeScreen</h3>
-<!-- Resource for the videos that I have made with modifications -->
-<div class="gridview_layout">
-    <!-- contents under this are displayed in grid format -->
-    <div class="gridview_layout_element">
+<div class="gridview_layout"><!-- Page is layed out in a grid format -->
+    <div class="gridview_layout_element"><!-- contents under this are displayed in grid format -->
         <video width="960" height="540" autoplay loop>
             <source src="/static/videos with inspirational qoutes/man-2037255.mp4"> 
         </video>
         <div class="gridview_layout_element_text">
-            <!-- Text that appears on the hover on video -->
-            <p>Source: EliasSch from pixabay</p>
+            <p>Source: EliasSch from pixabay</p><!-- Text that appears on the hover on video -->
         </div>
     </div>
     <div class="gridview_layout_element">
@@ -57,7 +56,8 @@
     </div>
 
 </div>
-
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- Section 2 -->
 <!-- Resource for the images that I jave used on my website -->
 <h3>Other Images used</h3>
 <div class="gridview_layout">
@@ -128,6 +128,5 @@
         </div>
     </div>
     <p>pop-up css affect from https://www.youtube.com/watch?v=k5fpqtOD530</p>
-</div>
 </div>
 {% endblock %}

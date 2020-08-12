@@ -83,7 +83,7 @@ nav ul {
     height: auto;
     margin: 0 0 0 5%;
 }
-.exercise_layout_element{/* Contents layout with video and text next to each other. */
+.exercise_layout_element{/* Content layout with video and text next to each other. */
     display: flex;
     max-height: 600px;
 }

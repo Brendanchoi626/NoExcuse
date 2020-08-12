@@ -1,9 +1,10 @@
 {% extends 'layout.html' %}
 {% block content %}
-<div class="darkbg">
-<!-- main part of the homepage, slideshow showing main content, and navbar showing some content -->
-<div class="home_txtoverimg">       
-    <div class="slideshow_container">
+<!-- html for home page -->
+<!-- Setion 1 -->
+<div class="darkbg"><!-- gives dark background -->
+<div class="home_txtoverimg"><!-- text is layed over image -->
+    <div class="slideshow_container"><!-- Slide show contents are here -->
         <div class="slideshow_element fade">
             <div class="slideshow_numbertext">1 / 3</div>
             <img src="/static/pictures to be replaced/armsfolded-crop.jpg" style="width:100%">
@@ -22,22 +23,23 @@
         </div> 
     </div> 
     <div class="home_container">
+        <!-- The nav bar on top of the image in home page -->
     <div class="home_container_content"> 
-        <!-- Left side box in home -->           
+        <!-- Left side box -->           
             <a href="/routine"><h2>Workout at home Free!</h2>
                 <p>NoExcuse contains many exercise routines which are premade for you
                     which most of it could just be done at home!
                 </p><p>Browse free routines</p></a>         
     </div>
     <div class="home_container_content">
-        <!-- middle box in home -->
+        <!-- middle box -->
         <video autoplay loop muted>
             <!-- videos selected randomly from a folder is played in the home page.  -->
         <source src="/static/videos with inspirational qoutes/{{randvid}}" type="video/mp4">
         </video>
     </div>
     <div class="home_container_content">
-        <!-- right side boxin home -->           
+        <!-- right side box -->           
         <a href="/help"><h2>Workout is too hard??</h2>
             <p>NoExcuse includes many of the free exercises that are relatively 
                 easier to do, which will help you a lot!
@@ -46,9 +48,11 @@
     </div>       
     </div>
 </div>
-<div class="lightbg">
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div class="lightbg"><!-- gives light background -->
 <!-- section2-->
-<div class="home_txtnexttoimg">
+<div class="home_txtnexttoimg"><!-- picture and text layed out next to each other -->
     <div class="home_content">
         <!-- picture on the left side -->
         <img src="/static/pictures to be replaced/questionable.png">
@@ -64,8 +68,9 @@
     </div>
 </div>
 </div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!-- Section 3 -->
-<div class="home_txtoverimg">
+<div class="home_txtoverimg"><!-- text is layed over image -->
     <!-- picture -->
         <a href="/testimonial"><img src="/static/pictures to be replaced/Screenshot (39).png" width="1920" height="1080"></a>
         <!-- contents inside the picture -->
@@ -76,10 +81,10 @@
             <p>testimonial</p></a>
         </div>
 </div>
-
-    <!-- section4 -->
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- section4 -->
 <div class="lightbg">
-<div class="home_txtnexttoimg">
+<div class="home_txtnexttoimg"><!-- picture and text layed out next to each other -->
     <!-- contents on left -->
     <div class="home_content">
     <h2>NoExcuse is a workout helping website for all people
@@ -93,7 +98,8 @@
     </div>
 </div>
 </div>
-
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- Js for the slide show -->
 <script>
 // Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto
     var slideIndex = 0;
@@ -110,7 +116,5 @@
       setTimeout(showSlides, 10000); // Change image every 2 seconds
     }
 </script>
-
-
-
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------->
 {% endblock %}
