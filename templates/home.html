@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+{% block title %}NoExcuse Home{% endblock %}
 {% block content %}
 <!-- html for home page -->
 <!-- Setion 1 -->
@@ -58,13 +59,17 @@
         <img src="/static/pictures to be replaced/questionable.png">
     </div>
     <div class="home_content">
-        <!-- contents on the right -->
+        <!-- contents on the right -->       
             <h2>Not Sure Where to Start?</h2>
-            <p>Here are some suggestions that we have for you!
-            </p>
+        <div class="home_content_tobe_removed2">
+            <p>Here are some suggestions that we have for you!</p>
+        </div>
+        <!-- contents that are not displayed in smaller resolution -->       
             <a href="/exercisenow/1"><p>Start from basic!></p></a>
+        <div class="home_contents_tobe_removed">
             <a href="/exercisenow/5"><p>Train your abs!></p></a>
             <a href="/exercisenow/9"><p>Need a bit of challenge?></p></a>
+        </div>
     </div>
 </div>
 </div>

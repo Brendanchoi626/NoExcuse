@@ -65,6 +65,7 @@ nav ul {
     box-shadow: 0px 8px 16px 0px;
     display: none;
     background-color: rgb(50, 50, 50);
+    z-index: 1;
 }
 .dropdown_content a{
     color: white;
@@ -306,10 +307,9 @@ nav ul {
 .slideshow_text {/* Caption text */
     color: #f2f2f2;
     font-size: 30px;
-    padding: 8px 12px;
     position: absolute;
     bottom: 400px;
-    width: 100%;
+    width: 98.2%; /* 98.2% because 100 % width was little bit ovcerflowing the max width of the page */  
     text-align: center;
 }
 .slideshow_numbertext {/* Number text (1/3 etc) */
@@ -373,7 +373,7 @@ footer p{
 /*------------------------------------------------------------------------------------------------------------------------------------*/
 /* media queries for responsive lwebsite layout */
 /*------------------------------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width : 1679px){
+@media screen and (max-width : 1680px){
     /* home */
     .home_container_content{
         font-size: smaller;
@@ -383,20 +383,32 @@ footer p{
         bottom: 500px
     }
 }
-@media screen and (max-width : 1564px){
+@media screen and (max-width : 1550px){
     /* exercisenow */
     .exercise_layout_element_text{
         width: 38%;
         padding: 1%;
     }   
 }
-@media screen and (max-width : 1236px){
+@media screen and (max-width : 1200px){
     /* exercisenow */
     .exercise_layout_element_text{
-        width: 40%;
-        padding: none;
-        /* home */
+        width: 96%;
+        margin: 0 0 2% 0;
+        padding: 2%;
     }
+    .exercise_layout_element{
+        display: block;
+    }
+    .exercise_layout_element_vid{
+        width: 100%;
+        margin-bottom: -1%;
+    }
+    .exercise_layout{
+        width: 100%;
+        margin: 0;
+    }
+    /* home */
     .home_container_content{
         top: 0px;
         max-height: 200px;
@@ -406,25 +418,19 @@ footer p{
         width: 100%;
         margin: 0;
     }
-}
-@media screen and (max-width : 1199px){
-    /* exercisenow */
-    .exercise_layout_element{
-        display: block;
-    }
-    .exercise_layout_element_vid{
-        width: 100%;
-        margin-bottom: -1%;
-    }
-    .exercise_layout_element_text{
-        width: 96%;
-        margin: 0 0 2% 0;
-        padding: 2%;
-    }
-    /* home.html */
     .home_content2{
         top: -200px;
         font-size: smaller;
+    }
+    /* information layout */
+    .information_layout{
+        width: 100%;
+        padding: 0;
+    }
+}
+@media screen and (max-width : 950px){
+    .home_contents_tobe_removed{
+        display: none;
     }
 }
 @media screen and (max-width : 750px) {
@@ -438,6 +444,12 @@ footer p{
     .home_content2{
         top: -120px;
         font-size: x-small;
+    }
+    .home_content{
+        font-size: smaller;
+    }
+    .home_content_tobe_removed2{
+        display: none;
     }
     /* nav */
     .logo img{

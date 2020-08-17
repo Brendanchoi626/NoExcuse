@@ -1,85 +1,18 @@
 {% extends 'layout.html' %}
+{% block title %}Exercise Routines{% endblock %}
 {% block content %}
 <!-- html for the routine page -->
 <h1 class="title">Routines</h1>
 <div class="gridview_layout"><!-- Page is layed out in a grid format -->
+    {% for routine in routines %}
     <div class="gridview_layout_element"><!-- contents are here -->
-        <a href="/exercisenow/{{(routines[0])[0]}}"><!-- description of a specific workout, it's image and its link -->
-        <img src="/static/Pictures for routine page/arm-crop.jpg" height="400" width="400"><p>{{ (routines[0])[1] }}</p></a>
+        <a href="/exercisenow/{{routine[0]}}"><!-- description of a specific workout, it's image and its link -->
+        <img src="/static/Pictures for routine page/{{routine[1]}}.jpg" height="400" width="400"><p>{{ routine[1] }}</p></a>
         <div class="gridview_layout_element_text"><!-- text in here will appear with fade affect on Hover -->
-            <p>{{ ((routines[0])[2])|safe }}</p> 
+            <p>{{ routine[2]|safe }}</p> 
         </div>
     </div>
-    <div class="gridview_layout_element">
-        <a href="/exercisenow/{{(routines[1])[0]}}">
-        <img src="/static/Pictures for routine page/back-crop.jpg" height="400" width="400"><p>{{ (routines[1])[1] }}</p></a>
-        <div class="gridview_layout_element_text">
-            <p>{{ ((routines[1])[2])|safe }}</p>
-        </div>
-    </div>
-    <div class="gridview_layout_element">    
-        <a href="/exercisenow/{{(routines[2])[0]}}">
-        <img src="/static/Pictures for routine page/upperbody-crop.jpg" height="400" width="400"><p>{{ (routines[2])[1] }}</p></a>
-        <div class="gridview_layout_element_text">
-            <p>{{ ((routines[2])[2])|safe }}</p>
-        </div>
-    </div>
-    <div class="gridview_layout_element">      
-        <a href="/exercisenow/{{(routines[3])[0]}}">
-        <img src="/static/Pictures for routine page/legs-crop.jpg" height="400" width="400"><p>{{ (routines[3])[1] }}</p></a>
-        <div class="gridview_layout_element_text">
-            <p>{{ ((routines[3])[2])|safe }}</p>
-        </div>
-    </div>
-    <div class="gridview_layout_element">    
-        <a href="/exercisenow/{{(routines[4])[0]}}">
-        <img src="/static/Pictures for routine page/abs-crop.jpg" height="400" width="400"><p>{{ (routines[4])[1] }}</p></a>
-        <div class="gridview_layout_element_text">
-            <p>{{ ((routines[4])[2])|safe }}</p>
-        </div>
-    </div>
-    <div class="gridview_layout_element">
-        <a href="/exercisenow/{{(routines[5])[0]}}">
-        <img src="/static/Pictures for routine page/10min_fire-crop.jpg" height="400" width="400"><p>{{ (routines[5])[1] }}</p></a>
-        <div class="gridview_layout_element_text">
-            <p>{{ ((routines[5])[2])|safe }}</p>
-        </div>
-    </div>
-    <div class="gridview_layout_element">   
-        <a href="/exercisenow/{{(routines[6])[0]}}">
-        <img src="/static/Pictures for routine page/all_combined-crop.jpg" height="400" width="400"><p>{{ (routines[6])[1] }}</p></a>
-        <div class="gridview_layout_element_text">
-            <p>{{ ((routines[6])[2])|safe }}</p>
-        </div>
-    </div>
-    <div class="gridview_layout_element">
-        <a href="/exercisenow/{{(routines[7])[0]}}">
-        <img src="/static/Pictures for routine page/core-crop.jpg" height="400" width="400"><p>{{ (routines[7])[1] }}</p></a>
-        <div class="gridview_layout_element_text">
-            <p>{{ ((routines[7])[2])|safe }}</p>
-        </div>
-    </div>
-    <div class="gridview_layout_element">    
-        <a href="/exercisenow/{{(routines[8])[0]}}">
-        <img src="/static/Pictures for routine page/5min_destroyer-crop.jpg" height="400" width="400"><p>{{ (routines[8])[1] }}</p></a>
-        <div class="gridview_layout_element_text">
-            <p>{{ ((routines[8])[2])|safe }}</p>
-        </div>
-    </div>    
-    <div class="gridview_layout_element">    
-        <a href="/exercisenow/{{(routines[9])[0]}}">
-        <img src="/static/Pictures for routine page/arm(hard)-crop.jpg" height="400" width="400"><p>{{ (routines[9])[1] }}</p></a>
-        <div class="gridview_layout_element_text">
-            <p>{{ ((routines[9])[2])|safe }}</p>
-        </div>
-    </div>
-    <div class="gridview_layout_element">
-        <a href="/exercisenow/{{(routines[10])[0]}}">
-        <img src="/static/Pictures for routine page/back(hard)-crop.jpg" height="400" width="400"><p>{{ (routines[10])[1] }}</p></a>
-        <div class="gridview_layout_element_text">
-        <p>{{ ((routines[10])[2])|safe }}</p>
-    </div>
-    </div>
+    {% endfor %}
 </div>
 {% endblock %}
 
