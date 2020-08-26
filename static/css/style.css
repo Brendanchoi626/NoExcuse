@@ -94,7 +94,6 @@ nav ul {
     height: auto;
     background-color: rgb(50, 50, 50);
     margin-bottom: 1.25%;
-    font-size: smaller;
     padding: 5%;  
     color: white;
 }
@@ -121,7 +120,6 @@ nav ul {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Tahoma, sans-serif;
 }
 .gridview_layout a p{
     text-align: center;
@@ -131,8 +129,9 @@ nav ul {
     font-size: large;
     font-weight: bold;
     background-color: white;
+    color: black;
 }
-.gridview_layout {/*       displays the contents in grid, while keeping the*/
+.gridview_layout {/*displays the contents in grid, while keeping the*/
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
     width: 100%;
@@ -144,7 +143,6 @@ nav ul {
     width: 400px;
     height: auto;
     position: relative;
-    background-color: white;
     margin: 10px auto;
     z-index: 0;
 }
@@ -189,28 +187,31 @@ nav ul {
 }
 .gridview_layout_element_text{/* styles the box + text created by transition motion */
     position: absolute;
-    color: white;
     bottom: 0;
     top: 10px;
     width: 400px;
     height: auto;
-    padding: 90px 30px;
+    padding: 15px 30px;
     display: none;
     text-align: center;
     font-size: auto;
     z-index: 1;
+    color: white;
     pointer-events: none;
 }
-.gridview_layout_element_text a::after{
+.gridview_layout_element a::after{
     text-decoration:none;
     margin: 0;
     padding: 0;
     position: relative;
     top: 10px;
-    bottom: 80px;
+    bottom: 80px;    
 }
 .gridview_layout_element:hover .gridview_layout_element_text{/* show hidden information on hover*/
     display: block;
+}
+.gridview_layout a p:hover{
+    background-color: whitesmoke;
 }
 /*------------------------------------------------------------------------------------------------------------------------------------*/
 /*styles home.html*/
@@ -292,7 +293,7 @@ nav ul {
     width:60%;
     height: auto;
     display: flex;
-    margin-left: 20%;
+    margin-left:20%;
 }
 .slideshow_element {/* Online css for the slidshow gallery */
     display: none;
@@ -358,17 +359,18 @@ nav ul {
 /*Styles footer.html*/
 /*------------------------------------------------------------------------------------------------------------------------------------*/
 footer{
-    background-color: rgb(71, 70, 70);
+    background-color: rgb(37, 37, 39);
     align-items: center;
 }
 footer a{
-    color: white;
+    color: rgb(200, 200, 200);
     text-align: center;
     text-decoration: none;
     padding: 10px 0 0 10px;
 }
 footer p{
     text-align: center;   
+    color: white;
 }
 /*------------------------------------------------------------------------------------------------------------------------------------*/
 /* media queries for responsive lwebsite layout */
@@ -390,7 +392,7 @@ footer p{
         padding: 1%;
     }   
 }
-@media screen and (max-width : 1200px){
+@media screen and (max-width : 1440px){
     /* exercisenow */
     .exercise_layout_element_text{
         width: 96%;
@@ -427,13 +429,14 @@ footer p{
         width: 100%;
         padding: 0;
     }
+    .nav, .gridview_layout, .exercise_layout, .home_txtnexttoimg, .home_txtoverimg, .information_layout{
+        font-size: larger;
+    }
 }
-@media screen and (max-width : 950px){
+@media screen and (max-width : 1080px){
     .home_contents_tobe_removed{
         display: none;
     }
-}
-@media screen and (max-width : 750px) {
     /* home */
     .home_container_content video{
         display: none;
@@ -442,12 +445,10 @@ footer p{
         bottom: 600px
     }
     .home_content2{
-        top: -120px;
-        font-size: x-small;
+        top: -200px;
     }
-    .home_content{
-        font-size: smaller;
-    }
+}
+@media screen and (max-width : 750px) {
     .home_content_tobe_removed2{
         display: none;
     }

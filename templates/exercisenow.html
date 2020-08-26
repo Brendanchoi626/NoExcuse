@@ -3,6 +3,7 @@
 {% block content %}   
 <!-- html for exercisenow page -->
 <div class="exercise_layout"><!-- page layout for exercise page width 90%-->
+
     {{description|safe}}
     {% for exercise in exercisenow %}
     <div class="exercise_layout_element"><!-- horizontal layout for video and text -->
@@ -11,10 +12,11 @@
         </div>         
         <div class="exercise_layout_element_text"><!-- The specific description of a specific exercise. -->
             <div class="exercise_layout_element_text_desc">
-                <p>{{exercise[4]|safe}} </p>
+                <p>{{exercise[1]|safe}} </p>
             </div>
         </div>
     </div>        
     {% endfor %}
+    
 </div>
 {% endblock %}

@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>NoExcuse</title>
     <link rel="stylesheet" href="/static/css/style.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
+<!-- The structure of the page -->
 <body>
     <!-- Layouts the page, where Nav.html and fotter.html are constants. -->
     <nav>{% include 'nav.html' %}</nav>
     <!-- Main contents that show the min information -->
     <main>{% block content %}{% endblock %}</main>
+    <!-- Footer -->
     <footer>{% include 'footer.html' %}</footer>
     
 </body>

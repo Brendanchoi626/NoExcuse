@@ -3,13 +3,14 @@
 {% block content %}
 <!-- html for the routine page -->
 <h1 class="title">Routines</h1>
+
 <div class="gridview_layout"><!-- Page is layed out in a grid format -->
     {% for routine in routines %}
     <div class="gridview_layout_element"><!-- contents are here -->
         <a href="/exercisenow/{{routine[0]}}"><!-- description of a specific workout, it's image and its link -->
         <img src="/static/Pictures for routine page/{{routine[1]}}.jpg" height="400" width="400"><p>{{ routine[1] }}</p></a>
         <div class="gridview_layout_element_text"><!-- text in here will appear with fade affect on Hover -->
-            <p>{{ routine[2]|safe }}</p> 
+            <p>{{ routine[2]|safe }}<a href="/exercisenow/{{routine[0]}}"></a></p>
         </div>
     </div>
     {% endfor %}
